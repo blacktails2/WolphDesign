@@ -1,3 +1,168 @@
 // 1. Import the initial variables
 @import "bulma.min";
 @import "../node_modules/bulma/sass/utilities/_all";
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=c1841fd8-ffc8-425b-8213-34cd601dff38");
+@font-face {
+	font-family: "Metro Nova Regular";
+	src: url("../fonts/c8c9aba5-f3a6-4e34-a524-70823be702f5.eot?#iefix");
+	src: url("../fonts/c8c9aba5-f3a6-4e34-a524-70823be702f5.eot?#iefix") format("eot"), url("../fonts/0beca509-b62a-49c5-bc79-57344e00c5ae.woff2") format("woff2"), url("../fonts/969ff0b9-0f7c-4b65-a9c2-839849ffb133.woff") format("woff"), url("../fonts/d7f3eee0-3187-4c2d-87e9-00a566a44133.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Nova Italic";
+	src: url("../fonts/66d7ff67-5bdc-4c85-a9d9-64e30deaea22.eot?#iefix");
+	src: url("../fonts/66d7ff67-5bdc-4c85-a9d9-64e30deaea22.eot?#iefix") format("eot"), url("../fonts/e440d294-bdd8-4b22-bdcb-2c0f6679a4f9.woff2") format("woff2"), url("../fonts/4de130e7-b81a-4e76-91e5-1559407c5d5b.woff") format("woff"), url("../fonts/ea778fb1-f331-47c7-ade0-498bcdb307de.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Nova Medium";
+	src: url("../fonts/26a35b9b-1f91-41c2-b20c-84d24b58cdad.eot?#iefix");
+	src: url("../fonts/26a35b9b-1f91-41c2-b20c-84d24b58cdad.eot?#iefix") format("eot"), url("../fonts/2f7b1a7b-d420-4207-ac42-2dbd0fe2a7f4.woff2") format("woff2"), url("../fonts/a5df6b6f-1bbf-483e-8ec2-d21c4b67fb06.woff") format("woff"), url("../fonts/86a8ea0d-1f5b-485f-a0ab-4d472f615b1e.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Nova MediumIt";
+	src: url("../fonts/80778ba4-1f35-4060-b017-c97d3506f1e7.eot?#iefix");
+	src: url("../fonts/80778ba4-1f35-4060-b017-c97d3506f1e7.eot?#iefix") format("eot"), url("../fonts/1a3727a1-88cd-49b0-85d5-a113427be183.woff2") format("woff2"), url("../fonts/5e4a7911-021b-468a-8005-6facc019e31a.woff") format("woff"), url("../fonts/27d987c1-3268-4df4-b94d-6bb6507c42e1.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Nova Bold";
+	src: url("../fonts/fe00c6c6-f343-4307-a1b7-67b964367054.eot?#iefix");
+	src: url("../fonts/fe00c6c6-f343-4307-a1b7-67b964367054.eot?#iefix") format("eot"), url("../fonts/e0cadafe-af3d-4d26-bc6b-3e272ebfb87a.woff2") format("woff2"), url("../fonts/a8179324-e684-440f-a7c4-42006055da74.woff") format("woff"), url("../fonts/0d074e0e-62f2-493c-a19a-6785a1191ec0.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Nova BoldIt";
+	src: url("../fonts/2ad72d8b-3445-4183-9c33-e12a06b24b87.eot?#iefix");
+	src: url("../fonts/2ad72d8b-3445-4183-9c33-e12a06b24b87.eot?#iefix") format("eot"), url("../fonts/a7cb616f-46b4-4926-a3b5-488a62ef9164.woff2") format("woff2"), url("../fonts/5d99a16d-3c43-4b20-9279-6deefe2a3f22.woff") format("woff"), url("../fonts/3c5ce01f-2137-49f7-b20b-ba35c033a102.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "forwolph";
+	src: url("../fonts/forwolph-Regular.eot?#iefix");
+	src: url("../fonts/forwolph-Regular.eot?#iefix") format("eot"), url("../fonts/forwolph-Regular.woff2") format("woff2"), url("../fonts/forwolph-Regular.woff") format("woff");
+}
+
+$body: "Metro Nova Regular",
+"こぶりなゴシック W3 JIS2004",
+"Koburina Gothic W3 JIS2004",
+sans-serif;
+$bold: "Metro Nova Bold",
+"こぶりなゴシック W6 JIS2004",
+"Koburina Gothic W6 JIS2004",
+sans-serif;
+$text: #333;
+$primary: #0B4D58;
+$back: #F0E5D1;
+$sub: #F5C51D;
+
+body {
+	font-family: $body;
+	background-color: $back;
+	a {
+		color: $text;
+	}
+}
+
+.icofont {
+	font-family: forwolph !important;
+}
+.top{
+	background-color: #F0F0F0;
+}
+.fullheight {
+	height: 100vh;
+}
+
+@-webkit-keyframes typing {
+	from {
+		width: 0
+	}
+	to {
+		width: 100%
+	}
+}
+
+@-moz-keyframes typing {
+	from {
+		width: 0
+	}
+	to {
+		width: 100%
+	}
+}
+
+.typeani {
+	display: inline-block;
+	width: 100%;
+	-webkit-animation: typing 0.7s ease-in-out;
+	-moz-animation: typing 0.7s ease-in-out;
+	overflow: hidden;
+}
+
+.hoverline {
+	transition: 0.3s all ease;
+	display: inline-block;
+	width: 100%;
+	height: 120%;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 50%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		background-color: $sub;
+		transform: translateY(20%) skewY(-10deg) translateX(-100%);
+		transition: 1s all ease-in-out;
+		transform-origin: top right;
+		z-index:-1;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+	}
+	&:hover {
+		color: $primary;
+		&:before {
+			transform: translateY(20%) skewY(-10deg) translateX(0%);
+			transition: 0.3s all ease-in-out;
+		}
+	}
+}
+
+#topnav {
+	position: fixed;
+	top: 0.5rem;
+	left: 1.3rem;
+	p {
+		font-size: 2.5em;
+	}
+}
+
+.level {
+	#logo {
+		font-size: 2.8em;
+		margin-bottom: 1rem;
+	}
+	p {
+		font-size: 1.5em;
+		font-family: $bold;
+	}
+}
+
+.flexright {
+	-webkit-justify-content: flex-end;
+	justify-content: flex-end;
+}
+
+.flexleft {
+	-webkit-justify-content: flex-start;
+	justify-content: flex-start;
+}
