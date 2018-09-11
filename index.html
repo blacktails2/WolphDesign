@@ -2,17 +2,23 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wolph / Masaki Ando</title>
-  <link rel="stylesheet" href="css/style.css">
-  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-  <script src="js/smooth-scroll.min.js"></script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Wolph / Masaki Ando</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="js/smooth-scroll.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 </head>
+
 <body>
-	<div id="topnav"><p class="icofont"><a class="typeani hoverline" href="#">s</a></p></div>
+	<div id="topnav">
+		<p class="icofont"><a class="typeani hoverline" href="#">s</a></p>
+	</div>
 	<section class="section top fullheight">
+		<h1 class="fadeOutUp animated">Wolph: Masaki Ando Portfolio Site</h1>
 		<nav class="level">
 			<div class="level-item"></div>
 			<div class="level-item has-text-centered flexright">
@@ -27,9 +33,50 @@
 			<div class="level-item"></div>
 		</nav>
 	</section>
+	<section class="section works">
+		<div class="container">
+			<h3><span class="typeani line">Works</span></h3>
+			<div class="columns is-variable is-5">
+				<div class="column">
+					<a href="">
+						<div class="article">
+							<img src="" alt="">
+							<h4>仕事Title</h4>
+							<p>Sep, 2018</p>
+							<p class="area"><span>WORK</span><span>WEBSITE</span></p>
+						</div>
+					</a>
+				</div>
+				<div class="column">
+					<a href="">
+						<div class="article">
+							<img src="" alt="">
+							<h4>仕事Title</h4>
+							<p>Sep, 2018</p>
+							<p class="area"><span>WORK</span><span>WEBSITE</span></p>
+						</div>
+					</a>
+				</div>
+				<div class="column">
+					<a href="">
+						<div class="article">
+							<img src="" alt="">
+							<h4>仕事Title</h4>
+							<p>Sep, 2018</p>
+							<p class="area"><span>WORK</span><span>WEBSITE</span></p>
+						</div>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer>Copyright 2018 Wolph / Masaki Ando</footer>
 </body>
 <script>
 var scroll = new SmoothScroll('a[href*="#"]');
+</script>
+<script>
+new WOW().init();
 </script>
 
 </html>

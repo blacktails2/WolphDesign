@@ -60,6 +60,7 @@ $sub: #F5C51D;
 body {
 	font-family: $body;
 	background-color: $back;
+	color: $text;
 	a {
 		color: $text;
 	}
@@ -68,13 +69,38 @@ body {
 .icofont {
 	font-family: forwolph !important;
 }
-.top{
+
+.top {
 	background-color: #F0F0F0;
 }
+
 .fullheight {
 	height: 100vh;
 }
+h1 {
+	position: absolute;
+	top: 0.5rem;
+	right: 0.7rem;
+	color: $primary;
+	opacity: 0.3;
+	animation-delay: 1s;
+}
 
+h3 {
+	font-size: 2em;
+	font-family: $bold;
+	text-align: center;
+}
+.works{
+	padding-top: 8rem;
+	padding-bottom: 8rem;
+}
+footer{
+	font-size: 0.8em;
+	text-align: center;
+	padding-bottom: 0.5rem;
+	color: $primary;
+}
 @-webkit-keyframes typing {
 	from {
 		width: 0
@@ -111,6 +137,7 @@ body {
 	z-index: 2;
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
+	will-change: transform;
 	&:before {
 		content: "";
 		display: block;
@@ -124,9 +151,10 @@ body {
 		transform: translateY(20%) skewY(-10deg) translateX(-100%);
 		transition: 1s all ease-in-out;
 		transform-origin: top right;
-		z-index:-1;
+		z-index: -1;
 		backface-visibility: hidden;
 		-webkit-backface-visibility: hidden;
+		will-change: transform;
 	}
 	&:hover {
 		color: $primary;

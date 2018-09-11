@@ -7122,7 +7122,8 @@ a.panel-block:hover, label.panel-block:hover {
 
 body {
   font-family: "Metro Nova Regular", "こぶりなゴシック W3 JIS2004", "Koburina Gothic W3 JIS2004", sans-serif;
-  background-color: #F0E5D1; }
+  background-color: #F0E5D1;
+  color: #333; }
   body a {
     color: #333; }
 
@@ -7134,6 +7135,29 @@ body {
 
 .fullheight {
   height: 100vh; }
+
+h1 {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.7rem;
+  color: #0B4D58;
+  opacity: 0.3;
+  animation-delay: 1s; }
+
+h3 {
+  font-size: 2em;
+  font-family: "Metro Nova Bold", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
+  text-align: center; }
+
+.works {
+  padding-top: 8rem;
+  padding-bottom: 8rem; }
+
+footer {
+  font-size: 0.8em;
+  text-align: center;
+  padding-bottom: 0.5rem;
+  color: #0B4D58; }
 
 @-webkit-keyframes typing {
   from {
@@ -7163,7 +7187,8 @@ body {
   position: relative;
   z-index: 2;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden; }
+  -webkit-backface-visibility: hidden;
+  will-change: transform; }
   .hoverline:before {
     content: "";
     display: block;
@@ -7179,7 +7204,8 @@ body {
     transform-origin: top right;
     z-index: -1;
     backface-visibility: hidden;
-    -webkit-backface-visibility: hidden; }
+    -webkit-backface-visibility: hidden;
+    will-change: transform; }
   .hoverline:hover {
     color: #0B4D58; }
     .hoverline:hover:before {
