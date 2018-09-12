@@ -37,6 +37,11 @@
 	src: url("../fonts/2ad72d8b-3445-4183-9c33-e12a06b24b87.eot?#iefix");
 	src: url("../fonts/2ad72d8b-3445-4183-9c33-e12a06b24b87.eot?#iefix") format("eot"), url("../fonts/a7cb616f-46b4-4926-a3b5-488a62ef9164.woff2") format("woff2"), url("../fonts/5d99a16d-3c43-4b20-9279-6deefe2a3f22.woff") format("woff"), url("../fonts/3c5ce01f-2137-49f7-b20b-ba35c033a102.ttf") format("truetype");
 }
+@font-face{
+        font-family:"Metro Nova Black";
+        src:url("../fonts/83861dd5-e608-479d-b290-bf8cec90414d.eot?#iefix");
+        src:url("../fonts/83861dd5-e608-479d-b290-bf8cec90414d.eot?#iefix") format("eot"),url("../fonts/f2ea76f7-2ba6-4e65-b1f1-83e5121e7eef.woff2") format("woff2"),url("../fonts/ceeed6a6-9159-435e-bb6d-b0ffebcfb8de.woff") format("woff"),url("../fonts/687f5344-b40d-4a3b-8d1d-1bce590a3796.ttf") format("truetype");
+    }
 
 @font-face {
 	font-family: "forwolph";
@@ -45,13 +50,16 @@
 }
 
 $body: "Metro Nova Regular",
+"KoburinaGoStdN-W3",
 "こぶりなゴシック W3 JIS2004",
 "Koburina Gothic W3 JIS2004",
 sans-serif;
-$bold: "Metro Nova Bold",
+$bold: "Metro Nova Medium",
+"KoburinaGoStdN-W6",
 "こぶりなゴシック W6 JIS2004",
 "Koburina Gothic W6 JIS2004",
 sans-serif;
+$boldeg: "Metro Nova Bold";
 $text: #333;
 $primary: #0B4D58;
 $back: #F0E5D1;
@@ -61,6 +69,10 @@ body {
 	font-family: $body;
 	background-color: $back;
 	color: $text;
+	font-kerning: normal;
+	-moz-font-feature-settings: "kern";
+	-webkit-font-feature-settings: "kern";
+	font-feature-settings: "kern";
 	a {
 		color: $text;
 	}
@@ -77,6 +89,7 @@ body {
 .fullheight {
 	height: 100vh;
 }
+
 h1 {
 	position: absolute;
 	top: 0.5rem;
@@ -88,19 +101,27 @@ h1 {
 
 h3 {
 	font-size: 2em;
-	font-family: $bold;
+	font-family: $boldeg;
 	text-align: center;
+	display: inline-block;
+	margin-bottom: 6rem;
+	span {
+		display: inline-block;
+	}
 }
-.works{
+
+.works {
 	padding-top: 8rem;
 	padding-bottom: 8rem;
 }
-footer{
+
+footer {
 	font-size: 0.8em;
 	text-align: center;
 	padding-bottom: 0.5rem;
 	color: $primary;
 }
+
 @-webkit-keyframes typing {
 	from {
 		width: 0
@@ -121,7 +142,6 @@ footer{
 
 .typeani {
 	display: inline-block;
-	width: 100%;
 	-webkit-animation: typing 0.7s ease-in-out;
 	-moz-animation: typing 0.7s ease-in-out;
 	overflow: hidden;
@@ -131,7 +151,6 @@ footer{
 	transition: 0.3s all ease;
 	display: inline-block;
 	width: 100%;
-	height: 120%;
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
@@ -148,7 +167,7 @@ footer{
 		bottom: 0;
 		left: 0;
 		background-color: $sub;
-		transform: translateY(20%) skewY(-10deg) translateX(-100%);
+		transform: translateY(20%) skewY(-10deg) translateX(-101%);
 		transition: 1s all ease-in-out;
 		transform-origin: top right;
 		z-index: -1;
@@ -161,6 +180,70 @@ footer{
 		&:before {
 			transform: translateY(20%) skewY(-10deg) translateX(0%);
 			transition: 0.3s all ease-in-out;
+		}
+	}
+}
+
+.cover {
+	z-index: auto;
+	&:before {
+		z-index: 1;
+		mix-blend-mode: multiply;
+	}
+}
+
+.line {
+	color: $primary;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 50%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		background-color: $sub;
+		transform: translateY(20%) skewY(-10deg) translateX(0%);
+		transition: 1s all ease-in-out;
+		transform-origin: top right;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		will-change: transform;
+		z-index: -1;
+	}
+}
+
+.article {
+	margin-bottom: 8rem;
+	h4 {
+		margin-top: 0.5rem;
+		font-family: $bold;
+		font-size: 1.3em;
+	}
+	h5 {
+		font-size: 0.7em;
+		margin-top: 0px;
+		margin-left: 2px;
+		font-variant-numeric: oldstyle-nums;
+		-moz-font-feature-settings: "onum";
+		-webkit-font-feature-settings: "onum";
+		font-feature-settings: "onum";
+	}
+	p {
+		margin-left: 2px;
+		margin-top: 8px;
+		font-size: 0.6em;
+		font-family: "Metro Nova Black";
+		color: $back;
+		span {
+			margin-right: 10px;
+			background-color: $primary;
+			padding: 2px 4px;
 		}
 	}
 }
@@ -181,7 +264,7 @@ footer{
 	}
 	p {
 		font-size: 1.5em;
-		font-family: $bold;
+		font-family: $boldeg;
 	}
 }
 
