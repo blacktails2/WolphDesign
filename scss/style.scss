@@ -186,9 +186,28 @@ footer {
 
 .cover {
 	z-index: auto;
+	position: relative;
 	&:before {
 		z-index: 1;
 		mix-blend-mode: multiply;
+	}
+	&:after{
+		content: "Go";
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		color: white;
+		font-family: "Metro Nova BoldIt";
+		transform: translateY(-75%) skewY(-10deg) translateX(-150%);
+		font-size: 2.5em;
+		z-index:2;
+		opacity: 0;
+		transition: 1s ease-in-out all;
+	}
+	&:hover:after{
+		opacity: 1;
+		transform: translateY(-75%) skewY(-10deg) translateX(-50%);
+		transition: 0.3s all ease-in-out;
 	}
 }
 
@@ -224,6 +243,9 @@ footer {
 		margin-top: 0.5rem;
 		font-family: $bold;
 		font-size: 1.3em;
+		@media screen and (min-width: 1024px) and (max-width:1280px){
+			font-size: 1.1em;
+		}
 	}
 	h5 {
 		font-size: 0.7em;
@@ -246,6 +268,21 @@ footer {
 			padding: 2px 4px;
 		}
 	}
+	@include tablet-only{
+			h4{
+				font-size: 0.8em;
+			}
+			h5{
+				font-size: 0.6em;
+			}
+			p{
+				font-size: 0.5em;
+				span{
+					margin-right: 8px;
+					padding: 2px 4px;
+				}
+			}
+		}
 }
 
 #topnav {
