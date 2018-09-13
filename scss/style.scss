@@ -37,11 +37,12 @@
 	src: url("../fonts/2ad72d8b-3445-4183-9c33-e12a06b24b87.eot?#iefix");
 	src: url("../fonts/2ad72d8b-3445-4183-9c33-e12a06b24b87.eot?#iefix") format("eot"), url("../fonts/a7cb616f-46b4-4926-a3b5-488a62ef9164.woff2") format("woff2"), url("../fonts/5d99a16d-3c43-4b20-9279-6deefe2a3f22.woff") format("woff"), url("../fonts/3c5ce01f-2137-49f7-b20b-ba35c033a102.ttf") format("truetype");
 }
-@font-face{
-        font-family:"Metro Nova Black";
-        src:url("../fonts/83861dd5-e608-479d-b290-bf8cec90414d.eot?#iefix");
-        src:url("../fonts/83861dd5-e608-479d-b290-bf8cec90414d.eot?#iefix") format("eot"),url("../fonts/f2ea76f7-2ba6-4e65-b1f1-83e5121e7eef.woff2") format("woff2"),url("../fonts/ceeed6a6-9159-435e-bb6d-b0ffebcfb8de.woff") format("woff"),url("../fonts/687f5344-b40d-4a3b-8d1d-1bce590a3796.ttf") format("truetype");
-    }
+
+@font-face {
+	font-family: "Metro Nova Black";
+	src: url("../fonts/83861dd5-e608-479d-b290-bf8cec90414d.eot?#iefix");
+	src: url("../fonts/83861dd5-e608-479d-b290-bf8cec90414d.eot?#iefix") format("eot"), url("../fonts/f2ea76f7-2ba6-4e65-b1f1-83e5121e7eef.woff2") format("woff2"), url("../fonts/ceeed6a6-9159-435e-bb6d-b0ffebcfb8de.woff") format("woff"), url("../fonts/687f5344-b40d-4a3b-8d1d-1bce590a3796.ttf") format("truetype");
+}
 
 @font-face {
 	font-family: "forwolph";
@@ -73,6 +74,10 @@ body {
 	-moz-font-feature-settings: "kern";
 	-webkit-font-feature-settings: "kern";
 	font-feature-settings: "kern";
+	font-variant-numeric: lining-nums;
+	-moz-font-feature-settings: "lnum";
+	-webkit-font-feature-settings: "lnum";
+	font-feature-settings: "lnum";
 	a {
 		color: $text;
 	}
@@ -84,6 +89,10 @@ body {
 
 .top {
 	background-color: #F0F0F0;
+}
+
+.backwhite {
+	background-color: #f0f0f0;
 }
 
 .fullheight {
@@ -140,11 +149,45 @@ footer {
 	}
 }
 
+@-webkit-keyframes slidebox {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(105%);
+	}
+}
+
+@-moz-keyframes slidebox {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(105%);
+	}
+}
+
 .typeani {
 	display: inline-block;
 	-webkit-animation: typing 0.7s ease-in-out;
 	-moz-animation: typing 0.7s ease-in-out;
 	overflow: hidden;
+}
+
+.slideani {
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	&:before {
+		transform: translateX(105%);
+		content: "";
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		background-color: $back;
+		-webkit-animation: slidebox 1s ease-in-out;
+		-moz-animation: slidebox 1s ease-in-out;
+	}
 }
 
 .hoverline {
@@ -191,7 +234,7 @@ footer {
 		z-index: 1;
 		mix-blend-mode: multiply;
 	}
-	&:after{
+	&:after {
 		content: "Go";
 		position: absolute;
 		top: 50%;
@@ -200,11 +243,11 @@ footer {
 		font-family: "Metro Nova BoldIt";
 		transform: translateY(-75%) skewY(-10deg) translateX(-150%);
 		font-size: 2.5em;
-		z-index:2;
+		z-index: 2;
 		opacity: 0;
 		transition: 1s ease-in-out all;
 	}
-	&:hover:after{
+	&:hover:after {
 		opacity: 1;
 		transform: translateY(-75%) skewY(-10deg) translateX(-50%);
 		transition: 0.3s all ease-in-out;
@@ -243,7 +286,7 @@ footer {
 		margin-top: 0.5rem;
 		font-family: $bold;
 		font-size: 1.3em;
-		@media screen and (min-width: 1024px) and (max-width:1280px){
+		@media screen and (min-width: 1024px) and (max-width:1280px) {
 			font-size: 1.1em;
 		}
 	}
@@ -256,7 +299,7 @@ footer {
 		-webkit-font-feature-settings: "onum";
 		font-feature-settings: "onum";
 	}
-	p {
+	.area {
 		margin-left: 2px;
 		margin-top: 8px;
 		font-size: 0.6em;
@@ -268,21 +311,68 @@ footer {
 			padding: 2px 4px;
 		}
 	}
-	@include tablet-only{
-			h4{
-				font-size: 0.8em;
-			}
-			h5{
-				font-size: 0.6em;
-			}
-			p{
-				font-size: 0.5em;
-				span{
-					margin-right: 8px;
-					padding: 2px 4px;
-				}
+	@include tablet-only {
+		h4 {
+			font-size: 0.8em;
+		}
+		h5 {
+			font-size: 0.6em;
+		}
+		p {
+			font-size: 0.5em;
+			span {
+				margin-right: 8px;
+				padding: 2px 4px;
 			}
 		}
+	}
+}
+
+.contents {
+	padding-top: 0;
+	img {
+		margin: 1rem 0;
+	}
+	h4 {
+		font-size: 1.5em;
+		font-family: $bold;
+		margin-top: 0.5rem;
+	}
+	h5 {
+		margin-top: 1rem;
+		font-family: $body;
+		font-size: 0.8em;
+		line-height: 1.5;
+		font-variant-numeric: oldstyle-nums;
+		-moz-font-feature-settings: "onum";
+		-webkit-font-feature-settings: "onum";
+		font-feature-settings: "onum";
+	}
+	.area {
+		margin-top: 1rem;
+		font-size: 0.8em;
+		font-family: "Metro Nova Black";
+		color: $back;
+		span {
+			margin-right: 13px;
+			background-color: $primary;
+			padding: 2px 5px;
+		}
+	}
+	h6{
+		margin-top: 0.7em;
+		text-align: center;
+		padding: 0.5rem 0;
+		font-family: $boldeg;
+		font-size: 1.2em;
+		border: 2px solid $primary;
+		&:before{
+			transform: translateY(0) skewY(-10deg) translateX(-101%);
+		}
+		&:hover:before{
+			transform: translateY(0) skewY(-10deg) translateX(0%);
+		}
+	}
 }
 
 #topnav {
@@ -290,7 +380,18 @@ footer {
 	top: 0.5rem;
 	left: 1.3rem;
 	p {
+		float: left;
+	}
+	#totop {
 		font-size: 2.5em;
+	}
+	#backtop {
+		font-size: 2.5em;
+		font-family: $boldeg;
+		margin-top: -2.9rem;
+		margin-left: 0.5rem;
+		width: auto;
+		height: 2.5em;
 	}
 }
 

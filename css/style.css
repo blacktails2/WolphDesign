@@ -7132,7 +7132,11 @@ body {
   font-kerning: normal;
   -moz-font-feature-settings: "kern";
   -webkit-font-feature-settings: "kern";
-  font-feature-settings: "kern"; }
+  font-feature-settings: "kern";
+  font-variant-numeric: lining-nums;
+  -moz-font-feature-settings: "lnum";
+  -webkit-font-feature-settings: "lnum";
+  font-feature-settings: "lnum"; }
   body a {
     color: #333; }
 
@@ -7141,6 +7145,9 @@ body {
 
 .top {
   background-color: #F0F0F0; }
+
+.backwhite {
+  background-color: #f0f0f0; }
 
 .fullheight {
   height: 100vh; }
@@ -7184,11 +7191,37 @@ footer {
   to {
     width: 100%; } }
 
+@-webkit-keyframes slidebox {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(105%); } }
+
+@-moz-keyframes slidebox {
+  from {
+    transform: translateX(0); }
+  to {
+    transform: translateX(105%); } }
+
 .typeani {
   display: inline-block;
   -webkit-animation: typing 0.7s ease-in-out;
   -moz-animation: typing 0.7s ease-in-out;
   overflow: hidden; }
+
+.slideani {
+  display: inline-block;
+  overflow: hidden;
+  position: relative; }
+  .slideani:before {
+    transform: translateX(105%);
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #F0E5D1;
+    -webkit-animation: slidebox 1s ease-in-out;
+    -moz-animation: slidebox 1s ease-in-out; }
 
 .hoverline {
   transition: 0.3s all ease;
@@ -7287,13 +7320,13 @@ footer {
     -moz-font-feature-settings: "onum";
     -webkit-font-feature-settings: "onum";
     font-feature-settings: "onum"; }
-  .article p {
+  .article .area {
     margin-left: 2px;
     margin-top: 8px;
     font-size: 0.6em;
     font-family: "Metro Nova Black";
     color: #F0E5D1; }
-    .article p span {
+    .article .area span {
       margin-right: 10px;
       background-color: #0B4D58;
       padding: 2px 4px; }
@@ -7308,12 +7341,59 @@ footer {
         margin-right: 8px;
         padding: 2px 4px; } }
 
+.contents {
+  padding-top: 0; }
+  .contents img {
+    margin: 1rem 0; }
+  .contents h4 {
+    font-size: 1.5em;
+    font-family: "Metro Nova Medium", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
+    margin-top: 0.5rem; }
+  .contents h5 {
+    margin-top: 1rem;
+    font-family: "Metro Nova Regular", "KoburinaGoStdN-W3", "こぶりなゴシック W3 JIS2004", "Koburina Gothic W3 JIS2004", sans-serif;
+    font-size: 0.8em;
+    line-height: 1.5;
+    font-variant-numeric: oldstyle-nums;
+    -moz-font-feature-settings: "onum";
+    -webkit-font-feature-settings: "onum";
+    font-feature-settings: "onum"; }
+  .contents .area {
+    margin-top: 1rem;
+    font-size: 0.8em;
+    font-family: "Metro Nova Black";
+    color: #F0E5D1; }
+    .contents .area span {
+      margin-right: 13px;
+      background-color: #0B4D58;
+      padding: 2px 5px; }
+  .contents h6 {
+    margin-top: 0.7em;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-family: "Metro Nova Bold";
+    font-size: 1.2em;
+    border: 2px solid #0B4D58; }
+    .contents h6:before {
+      transform: translateY(0) skewY(-10deg) translateX(-101%); }
+    .contents h6:hover:before {
+      transform: translateY(0) skewY(-10deg) translateX(0%); }
+
 #topnav {
   position: fixed;
   top: 0.5rem;
   left: 1.3rem; }
   #topnav p {
+    float: left; }
+  #topnav #totop {
     font-size: 2.5em; }
+  #topnav #backtop {
+    font-size: 2.5em;
+    font-family: "Metro Nova Bold";
+    margin-top: -2.9rem;
+    margin-left: 0.5rem;
+    width: auto;
+    height: 2.5em; }
 
 .level #logo {
   font-size: 2.8em;
