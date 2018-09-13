@@ -7342,7 +7342,9 @@ footer {
         padding: 2px 4px; } }
 
 .contents {
-  padding-top: 0; }
+  margin-bottom: 8rem;
+  padding-top: 0;
+  margin-top: -1rem; }
   .contents img {
     margin: 1rem 0; }
   .contents h4 {
@@ -7362,6 +7364,7 @@ footer {
     margin-top: 1rem;
     font-size: 0.8em;
     font-family: "Metro Nova Black";
+    margin-bottom: 2rem;
     color: #F0E5D1; }
     .contents .area span {
       margin-right: 13px;
