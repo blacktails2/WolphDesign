@@ -7213,12 +7213,14 @@ footer {
   display: inline-block;
   overflow: hidden;
   position: relative; }
-  .slideani:before {
+  .slideani:after {
     transform: translateX(105%);
     content: "";
     position: absolute;
     width: 100%;
     height: 100%;
+    left: 0;
+    top: 0;
     background-color: #F0E5D1;
     -webkit-animation: slidebox 1s ease-in-out;
     -moz-animation: slidebox 1s ease-in-out; }
@@ -7243,7 +7245,7 @@ footer {
     bottom: 0;
     left: 0;
     background-color: #F5C51D;
-    transform: translateY(20%) skewY(-10deg) translateX(-101%);
+    transform: translateY(20%) skewY(-10deg) translateX(-102%);
     transition: 1s all ease-in-out;
     transform-origin: top right;
     z-index: -1;
@@ -7254,6 +7256,38 @@ footer {
     color: #0B4D58; }
     .hoverline:hover:before {
       transform: translateY(20%) skewY(-10deg) translateX(0%);
+      transition: 0.3s all ease-in-out; }
+
+.hoverico {
+  transition: 0.3s all ease;
+  display: inline-block;
+  overflow: hidden;
+  position: relative;
+  z-index: 2;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+  will-change: transform; }
+  .hoverico:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #F5C51D;
+    transform: translateY(47%) skewY(-10deg) translateX(-102%);
+    transition: 1s all ease-in-out;
+    transform-origin: top right;
+    z-index: -1;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform; }
+  .hoverico:hover {
+    color: #0B4D58; }
+    .hoverico:hover:before {
+      transform: translateY(47%) skewY(-10deg) translateX(0%);
       transition: 0.3s all ease-in-out; }
 
 .cover {
@@ -7385,18 +7419,10 @@ footer {
 #topnav {
   position: fixed;
   top: 0.5rem;
-  left: 1.3rem; }
-  #topnav p {
-    float: left; }
-  #topnav #totop {
-    font-size: 2.5em; }
+  left: 1.3rem;
+  font-size: 2.5em; }
   #topnav #backtop {
-    font-size: 2.5em;
-    font-family: "Metro Nova Bold";
-    margin-top: -2.9rem;
-    margin-left: 0.5rem;
-    width: auto;
-    height: 2.5em; }
+    margin-left: 0.8rem; }
 
 .level #logo {
   font-size: 2.8em;

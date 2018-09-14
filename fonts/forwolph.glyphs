@@ -1,7 +1,7 @@
 {
 .appVersion = "1141";
 DisplayStrings = (
-ls
+"s h"
 );
 date = "2018-09-11 12:01:06 +0000";
 familyName = forwolph;
@@ -347,10 +347,49 @@ unicode = 0067;
 },
 {
 glyphname = h;
+lastChange = "2018-09-14 01:59:01 +0000";
 layers = (
 {
 layerId = "0BC55F84-2B94-4C38-A505-086F89F83D00";
-width = 600;
+paths = (
+{
+closed = 1;
+nodes = (
+"5 351 LINE",
+"251 351 LINE",
+"482 732 LINE",
+"264 732 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"487 -30 LINE",
+"251 351 LINE",
+"5 351 LINE",
+"251 -30 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"401 351 LINE",
+"647 351 LINE",
+"878 732 LINE",
+"660 732 LINE"
+);
+},
+{
+closed = 1;
+nodes = (
+"883 -30 LINE",
+"647 351 LINE",
+"401 351 LINE",
+"647 -30 LINE"
+);
+}
+);
+width = 903;
 }
 );
 unicode = 0068;
@@ -826,10 +865,11 @@ unicode = 002D;
 },
 {
 glyphname = space;
+lastChange = "2018-09-14 01:57:47 +0000";
 layers = (
 {
 layerId = "0BC55F84-2B94-4C38-A505-086F89F83D00";
-width = 600;
+width = 200;
 }
 );
 unicode = 0020;

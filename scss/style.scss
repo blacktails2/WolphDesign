@@ -178,12 +178,14 @@ footer {
 	display: inline-block;
 	overflow: hidden;
 	position: relative;
-	&:before {
+	&:after {
 		transform: translateX(105%);
 		content: "";
 		position: absolute;
 		width: 100%;
 		height: 100%;
+		left: 0;
+		top: 0;
 		background-color: $back;
 		-webkit-animation: slidebox 1s ease-in-out;
 		-moz-animation: slidebox 1s ease-in-out;
@@ -210,7 +212,7 @@ footer {
 		bottom: 0;
 		left: 0;
 		background-color: $sub;
-		transform: translateY(20%) skewY(-10deg) translateX(-101%);
+		transform: translateY(20%) skewY(-10deg) translateX(-102%);
 		transition: 1s all ease-in-out;
 		transform-origin: top right;
 		z-index: -1;
@@ -222,6 +224,41 @@ footer {
 		color: $primary;
 		&:before {
 			transform: translateY(20%) skewY(-10deg) translateX(0%);
+			transition: 0.3s all ease-in-out;
+		}
+	}
+}
+.hoverico {
+	transition: 0.3s all ease;
+	display: inline-block;
+	overflow: hidden;
+	position: relative;
+	z-index: 2;
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	will-change: transform;
+	&:before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 50%;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		background-color: $sub;
+		transform: translateY(47%) skewY(-10deg) translateX(-102%);
+		transition: 1s all ease-in-out;
+		transform-origin: top right;
+		z-index: -1;
+		backface-visibility: hidden;
+		-webkit-backface-visibility: hidden;
+		will-change: transform;
+	}
+	&:hover {
+		color: $primary;
+		&:before {
+			transform: translateY(47%) skewY(-10deg) translateX(0%);
 			transition: 0.3s all ease-in-out;
 		}
 	}
@@ -382,19 +419,9 @@ footer {
 	position: fixed;
 	top: 0.5rem;
 	left: 1.3rem;
-	p {
-		float: left;
-	}
-	#totop {
-		font-size: 2.5em;
-	}
+	font-size: 2.5em;
 	#backtop {
-		font-size: 2.5em;
-		font-family: $boldeg;
-		margin-top: -2.9rem;
-		margin-left: 0.5rem;
-		width: auto;
-		height: 2.5em;
+		margin-left: 0.8rem;
 	}
 }
 
