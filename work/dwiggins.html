@@ -21,6 +21,18 @@
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 	<script src="/js/smooth-scroll.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/layzr.js/2.2.2/layzr.min.js"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53606233-5"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+
+	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+
+	gtag('config', 'UA-53606233-5');
+	</script>
+	<script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ggfsXn9cZZA%3D" charset="utf-8"></script>
 </head>
 
 <body>
@@ -44,19 +56,21 @@
 			<div class="columns is-centered">
 				<div class="column is-9">
 					<img class="fadeIn animated" src="/img/works/dwiggins/top-high.jpg">
-					<div class="columns is-variable is-1">
-						<div class="column is-10">
-							<h4><span class="slideani wow">
+					<div class="workinfo">
+						<div class="columns is-variable is-1">
+							<div class="column is-10">
+								<h4><span class="slideani wow">
 						A History and Typeface of William Addison Dwiggins
 					</span></h4>
-							<h5><span class="slideani wow">
+								<h5><span class="slideani wow">
 						September, 2018<br>
 						MAU VCD<br>Writing Space Design Class
 					</span></h5>
-							<p class="area slideani wow"><span>School</span><span>Website</span><span>Typeface</span></p>
-						</div>
-						<div class="column">
-							<a href=""><h6 class="animated fadeIn hoverline">Go Site</h6></a>
+								<p class="area slideani wow"><span>School</span><span>Website</span><span>Typeface</span></p>
+							</div>
+							<div class="column">
+								<a href=""><h6 class="animated fadeIn hoverline">Go Site</h6></a>
+							</div>
 						</div>
 					</div>
 					<p class="wow fadeInUp">
@@ -73,6 +87,12 @@ var scroll = new SmoothScroll('a[href*="#"]');
 </script>
 <script>
 new WOW().init();
+</script>
+<script>
+	window.addEventListener("load", () => {
+  const instance = Layzr({threshold: 2}); //thresholdを追加
+  instance.update().handlers(true);
+});
 </script>
 
 </html>
