@@ -7079,6 +7079,197 @@ a.panel-block:hover, label.panel-block:hover {
   background-color: #fafafa;
   padding: 3rem 1.5rem 6rem; }
 
+@keyframes a {
+  0% {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@keyframes b {
+  0% {
+    opacity: 0;
+    transform: scale(0.5); }
+  to {
+    opacity: 1;
+    transform: scale(1); } }
+
+@keyframes c {
+  0% {
+    transform: translate(-50%, -50%) rotate(0); }
+  50% {
+    transform: translate(-50%, -50%) rotate(-180deg); }
+  to {
+    transform: translate(-50%, -50%) rotate(-1turn); } }
+
+@keyframes d {
+  0% {
+    transform: scale(1); }
+  10% {
+    transform: scale(1.2) translateX(6px); }
+  25% {
+    transform: scale(1.3) translateX(8px); }
+  40% {
+    transform: scale(1.2) translateX(6px); }
+  50% {
+    transform: scale(1); }
+  60% {
+    transform: scale(0.8) translateX(6px); }
+  75% {
+    transform: scale(0.7) translateX(8px); }
+  90% {
+    transform: scale(0.8) translateX(6px); }
+  to {
+    transform: scale(1); } }
+
+@keyframes e {
+  0% {
+    transform: scale(1); }
+  10% {
+    transform: scale(1.2) translateX(-6px); }
+  25% {
+    transform: scale(1.3) translateX(-8px); }
+  40% {
+    transform: scale(1.2) translateX(-6px); }
+  50% {
+    transform: scale(1); }
+  60% {
+    transform: scale(0.8) translateX(-6px); }
+  75% {
+    transform: scale(0.7) translateX(-8px); }
+  90% {
+    transform: scale(0.8) translateX(-6px); }
+  to {
+    transform: scale(1); } }
+
+.lum-lightbox {
+  background: rgba(0, 0, 0, 0.6); }
+
+.lum-lightbox-inner {
+  bottom: 2.5%;
+  left: 2.5%;
+  right: 2.5%;
+  top: 2.5%; }
+
+.lum-lightbox-inner img {
+  position: relative; }
+
+.lum-lightbox-inner .lum-lightbox-caption {
+  color: #fff;
+  margin: 0 auto;
+  max-width: 700px;
+  text-align: center; }
+
+.lum-loading .lum-lightbox-loader {
+  animation: c 1.8s infinite linear;
+  display: block;
+  height: 20px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 66px; }
+
+.lum-lightbox-loader:after, .lum-lightbox-loader:before {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  content: "";
+  display: block;
+  height: 20px;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 20px; }
+
+.lum-lightbox-loader:before {
+  animation: d 1.8s infinite linear;
+  left: 0; }
+
+.lum-lightbox-loader:after {
+  animation: e 1.8s infinite linear;
+  animation-delay: -.9s;
+  right: 0; }
+
+.lum-lightbox.lum-opening {
+  animation: a .18s ease-out; }
+
+.lum-lightbox.lum-opening .lum-lightbox-inner {
+  animation: b .18s ease-out; }
+
+.lum-lightbox.lum-closing {
+  animation: a .3s ease-in;
+  animation-direction: reverse; }
+
+.lum-lightbox.lum-closing .lum-lightbox-inner {
+  animation: b .3s ease-in;
+  animation-direction: reverse; }
+
+.lum-img {
+  transition: opacity .12s ease-out; }
+
+.lum-loading .lum-img {
+  opacity: 0; }
+
+.lum-gallery-button {
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  height: 100px;
+  margin: 0;
+  max-height: 100%;
+  outline: 0;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  text-indent: 150%;
+  top: 50%;
+  transform: translateY(-50%);
+  white-space: nowrap;
+  width: 60px; }
+
+.lum-previous-button {
+  left: 12px; }
+
+.lum-next-button {
+  right: 12px; }
+
+.lum-gallery-button:after {
+  border-top: 4px solid rgba(255, 255, 255, 0.8);
+  content: "";
+  display: block;
+  height: 36px;
+  position: absolute;
+  top: 50%;
+  width: 36px; }
+
+.lum-previous-button:after {
+  border-left: 4px solid rgba(255, 255, 255, 0.8);
+  border-radius: 3px 0 0 0;
+  box-shadow: -2px 0 rgba(0, 0, 0, 0.2);
+  left: 12%;
+  transform: translateY(-50%) rotate(-45deg); }
+
+.lum-next-button:after {
+  border-radius: 0 3px 0 0;
+  border-right: 4px solid rgba(255, 255, 255, 0.8);
+  box-shadow: 2px 0 rgba(0, 0, 0, 0.2);
+  right: 12%;
+  transform: translateY(-50%) rotate(45deg); }
+
+@media (max-width: 460px) {
+  .lum-lightbox-image-wrapper {
+    -webkit-overflow-scrolling: touch;
+    display: flex;
+    overflow: auto; }
+  .lum-lightbox-caption {
+    bottom: 0;
+    position: absolute;
+    width: 100%; }
+  .lum-lightbox-position-helper {
+    margin: auto; }
+  .lum-lightbox-inner img {
+    max-height: none;
+    max-width: none; } }
+
 @keyframes spinAround {
   from {
     transform: rotate(0deg); }
@@ -7376,50 +7567,94 @@ footer {
         padding: 2px 4px; } }
 
 .contents {
-  margin-bottom: 8rem;
   padding-top: 0;
   margin-top: -1rem; }
   .contents .workinfo {
     margin-bottom: 2rem; }
+    .contents .workinfo h4 {
+      font-size: 1.5em;
+      font-family: "Metro Nova Medium", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
+      margin-top: 0.5rem;
+      line-height: 1.3; }
+    .contents .workinfo h5 {
+      margin-top: 1rem;
+      font-family: "Metro Nova Regular", "KoburinaGoStdN-W3", "こぶりなゴシック W3 JIS2004", "Koburina Gothic W3 JIS2004", sans-serif;
+      font-size: 0.8em;
+      line-height: 1.5;
+      font-variant-numeric: oldstyle-nums;
+      -moz-font-feature-settings: "onum";
+      -webkit-font-feature-settings: "onum";
+      font-feature-settings: "onum"; }
+    .contents .workinfo .area {
+      margin-top: 1rem;
+      font-size: 0.8em;
+      font-family: "Metro Nova Black";
+      color: #F0E5D1; }
+      .contents .workinfo .area span {
+        margin-right: 13px;
+        background-color: #0B4D58;
+        padding: 2px 5px; }
+    .contents .workinfo h6 {
+      margin-top: 0.7em;
+      text-align: center;
+      padding: 0.5rem 0;
+      font-family: "Metro Nova Bold";
+      font-size: 1.2em;
+      border: 2px solid #0B4D58; }
+      .contents .workinfo h6:before {
+        height: 80%;
+        top: 50%;
+        transform-origin: center center;
+        transform: translateY(-50%) skewY(-10deg) translateX(-101%); }
+      .contents .workinfo h6:hover:before {
+        transform-origin: center center;
+        transform: translateY(-50%) skewY(-10deg) translateX(0%); }
   .contents img {
-    margin: 1rem 0; }
-  .contents h4 {
-    font-size: 1.5em;
-    font-family: "Metro Nova Medium", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
-    margin-top: 0.5rem;
-    line-height: 1.3; }
-  .contents h5 {
-    margin-top: 1rem;
-    font-family: "Metro Nova Regular", "KoburinaGoStdN-W3", "こぶりなゴシック W3 JIS2004", "Koburina Gothic W3 JIS2004", sans-serif;
-    font-size: 0.8em;
-    line-height: 1.5;
-    font-variant-numeric: oldstyle-nums;
-    -moz-font-feature-settings: "onum";
-    -webkit-font-feature-settings: "onum";
-    font-feature-settings: "onum"; }
-  .contents .area {
-    margin-top: 1rem;
-    font-size: 0.8em;
-    font-family: "Metro Nova Black";
-    color: #F0E5D1; }
-    .contents .area span {
-      margin-right: 13px;
-      background-color: #0B4D58;
-      padding: 2px 5px; }
-  .contents h6 {
-    margin-top: 0.7em;
-    text-align: center;
-    padding: 0.5rem 0;
-    font-family: "Metro Nova Bold";
-    font-size: 1.2em;
-    border: 2px solid #0B4D58; }
-    .contents h6:before {
-      top: 50%;
-      transform-origin: center center;
-      transform: translateY(-50%) skewY(-10deg) translateX(-101%); }
-    .contents h6:hover:before {
-      transform-origin: center center;
-      transform: translateY(-50%) skewY(-10deg) translateX(0%); }
+    margin: 0.5rem 0; }
+  .contents .columns {
+    margin-bottom: 0; }
+    .contents .columns .column {
+      padding-top: 0;
+      padding-bottom: 0; }
+      .contents .columns .column figcaption {
+        font-size: 0.8em;
+        text-align: right;
+        margin-top: -0.5rem; }
+  .contents p {
+    margin: 1rem 0;
+    line-height: 1.8;
+    text-align: justify; }
+    .contents p a {
+      font-family: "Metro Nova Medium", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      transition: 0.3s ease-in-out all; }
+      .contents p a:before {
+        content: "";
+        background-color: #F5C51D;
+        transform-origin: center center;
+        position: absolute;
+        height: 80%;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-102%);
+        transition: 1s ease-in-out all;
+        z-index: -1; }
+      .contents p a:hover {
+        color: #0B4D58; }
+        .contents p a:hover:before {
+          transform: translateY(-50%) translateX(0%);
+          transition: 0.3s ease-in-out all; }
+  .contents .gray {
+    opacity: 0.3; }
+    .contents .gray .cover:after {
+      content: "Wait"; }
+  .contents .other {
+    margin-top: 3rem; }
+    .contents .other h4 {
+      margin-top: -0.5rem;
+      font-size: 1.2em; }
 
 #topnav {
   position: fixed;
@@ -7445,3 +7680,37 @@ footer {
 .flexleft {
   -webkit-justify-content: flex-start;
   justify-content: flex-start; }
+
+#mobile-menu {
+  display: none; }
+
+@media screen and (max-width: 768px) {
+  .mobile-none {
+    display: none; }
+  .level #logo {
+    font-size: 2.2em; }
+  #topnav {
+    top: 0.3rem;
+    left: 0.8rem;
+    font-size: 2.3em; }
+    #topnav #backtop {
+      margin-left: 0.5rem; }
+  #mobile-menu {
+    display: block;
+    text-align: center;
+    margin-top: -1rem; }
+    #mobile-menu p {
+      text-align: center;
+      margin: 0 1rem;
+      display: inline-block;
+      font-size: 1.2em;
+      font-family: "Metro Nova Bold"; }
+  .article {
+    margin-bottom: 3rem; }
+  .works {
+    padding-top: 4rem;
+    padding-bottom: 4rem; }
+  h3 {
+    margin-bottom: 3rem; }
+  .contents p {
+    font-size: 0.9em; } }
