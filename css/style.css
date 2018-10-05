@@ -7335,13 +7335,18 @@ body {
   font-family: forwolph !important; }
 
 .top {
-  background-color: #F0F0F0; }
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background: url("/img/back1.svg") no-repeat center center;
+  background-size: contain; }
 
 .backwhite {
   background-color: #f0f0f0; }
 
 .fullheight {
-  height: 100vh; }
+  height: 100vh;
+  background-color: #f0f0f0; }
 
 h1 {
   position: absolute;
@@ -7353,7 +7358,7 @@ h1 {
 
 h3 {
   font-size: 2em;
-  font-family: "Metro Nova Bold";
+  font-family: "Metro Nova Bold", sans-serif;
   text-align: center;
   display: inline-block;
   margin-bottom: 6rem; }
@@ -7363,6 +7368,64 @@ h3 {
 .works {
   padding-top: 8rem;
   padding-bottom: 8rem; }
+
+.about {
+  padding-top: 8rem; }
+  .about .slideani:after {
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards; }
+  .about h4 {
+    font-family: "Metro Nova Medium", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
+    font-size: 1.3em; }
+    @media screen and (min-width: 1024px) and (max-width: 1280px) {
+      .about h4 {
+        font-size: 1.1em; } }
+  .about h5 {
+    margin-top: 3px;
+    margin-bottom: 1rem;
+    font-size: 0.7em;
+    font-variant-numeric: oldstyle-nums;
+    -moz-font-feature-settings: "onum";
+    -webkit-font-feature-settings: "onum";
+    font-feature-settings: "onum"; }
+  .about p {
+    font-size: 0.9em;
+    line-height: 1.8;
+    text-align: justify; }
+  .about .icon {
+    transform: translate(-2px, 4px); }
+  .about a {
+    font-family: "Metro Nova Medium", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    transition: 0.3s ease-in-out all; }
+    .about a:before {
+      content: "";
+      background-color: #F5C51D;
+      transform-origin: center center;
+      position: absolute;
+      height: 80%;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%) translateX(-102%);
+      transition: 1s ease-in-out all;
+      z-index: -1; }
+    .about a:hover {
+      color: #0B4D58; }
+      .about a:hover:before {
+        transform: translateY(-50%) translateX(0%);
+        transition: 0.3s ease-in-out all; }
+
+.skill h4 {
+  font-size: 1.1em;
+  text-align: center; }
+
+.skill img {
+  max-height: 6rem; }
+
+#cpy {
+  font-size: 0.8em; }
 
 footer {
   font-size: 0.8em;
@@ -7569,6 +7632,9 @@ footer {
 .contents {
   padding-top: 0;
   margin-top: -1rem; }
+  .contents .slideani:after {
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards; }
   .contents .workinfo {
     margin-bottom: 2rem; }
     .contents .workinfo h4 {
@@ -7598,7 +7664,7 @@ footer {
       margin-top: 0.7em;
       text-align: center;
       padding: 0.5rem 0;
-      font-family: "Metro Nova Bold";
+      font-family: "Metro Nova Bold", sans-serif;
       font-size: 1.2em;
       border: 2px solid #0B4D58; }
       .contents .workinfo h6:before {
@@ -7609,6 +7675,23 @@ footer {
       .contents .workinfo h6:hover:before {
         transform-origin: center center;
         transform: translateY(-50%) skewY(-10deg) translateX(0%); }
+  .contents .workinfo-mini {
+    margin-bottom: 1rem; }
+    .contents .workinfo-mini h4 {
+      font-size: 1.3em;
+      font-family: "Metro Nova Medium", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
+      margin-top: 0.5rem;
+      line-height: 1.3; }
+    .contents .workinfo-mini h5 {
+      font-family: "Metro Nova Regular", "KoburinaGoStdN-W3", "こぶりなゴシック W3 JIS2004", "Koburina Gothic W3 JIS2004", sans-serif;
+      font-size: 0.8em;
+      line-height: 1.5;
+      font-variant-numeric: oldstyle-nums;
+      -moz-font-feature-settings: "onum";
+      -webkit-font-feature-settings: "onum";
+      font-feature-settings: "onum"; }
+  .contents .workinfo-mini + p {
+    margin-bottom: 7rem; }
   .contents img {
     margin: 0.5rem 0; }
   .contents .columns {
@@ -7646,15 +7729,16 @@ footer {
         .contents p a:hover:before {
           transform: translateY(-50%) translateX(0%);
           transition: 0.3s ease-in-out all; }
-  .contents .gray {
-    opacity: 0.3; }
-    .contents .gray .cover:after {
-      content: "Wait"; }
   .contents .other {
     margin-top: 3rem; }
     .contents .other h4 {
       margin-top: -0.5rem;
       font-size: 1.2em; }
+
+.gray {
+  opacity: 0.3; }
+  .gray .cover:after {
+    content: "Wait"; }
 
 #topnav {
   position: fixed;
@@ -7671,7 +7755,7 @@ footer {
 
 .level p {
   font-size: 1.5em;
-  font-family: "Metro Nova Bold"; }
+  font-family: "Metro Nova Bold", sans-serif; }
 
 .flexright {
   -webkit-justify-content: flex-end;
@@ -7683,6 +7767,13 @@ footer {
 
 #mobile-menu {
   display: none; }
+
+.credit {
+  font-size: 0.8em;
+  padding-top: 0.5rem;
+  padding-left: 1rem;
+  padding-bottom: 0.5rem;
+  border-left: 1px solid #0B4D58; }
 
 @media screen and (max-width: 768px) {
   .mobile-none {
@@ -7704,13 +7795,18 @@ footer {
       margin: 0 1rem;
       display: inline-block;
       font-size: 1.2em;
-      font-family: "Metro Nova Bold"; }
+      font-family: "Metro Nova Bold", sans-serif; }
   .article {
     margin-bottom: 3rem; }
   .works {
     padding-top: 4rem;
     padding-bottom: 4rem; }
+  .about {
+    padding-top: 4rem; }
   h3 {
     margin-bottom: 3rem; }
   .contents p {
-    font-size: 0.9em; } }
+    font-size: 0.9em; }
+  .top {
+    background: #f0f0f0 url("/img/back1mobile.svg") no-repeat center center;
+    background-size: contain; } }

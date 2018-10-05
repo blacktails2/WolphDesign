@@ -10,8 +10,8 @@
 	<meta property="og:description" content="安藤 真生の個人ポートフォリオサイト、“Wolph”です。タイポグラフィーの知識をもとに、グラフィックデザイン、Webデザインなどを行なっています。" />
 	<meta property="fb:app_id" content="1017144541791784" />
 	<meta name="twitter:card" content="summary" />
-	<meta name="twitter:site" content="@268kuro" />
-	<meta name="twitter:player" content="@268kuro" />
+	<meta name="twitter:site" content="＠wolphtype" />
+	<meta name="twitter:player" content="＠wolphtype" />
 	<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
@@ -27,6 +27,7 @@
 	<script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 	<script src="js/smooth-scroll.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 	<script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ggfsXn9cZZA%3D&fadein=-1" charset="utf-8"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
@@ -45,7 +46,8 @@
 	<div id="topnav">
 		<p class="icofont"><a id="totop" class="typeani hoverline" href="#">s</a></p>
 	</div>
-	<section class="section top fullheight">
+	<div class="top animated fadeInUp"></div>
+	<section class="section fullheight">
 		<h1 class="fadeOutUp animated">Wolph: Masaki Ando Portfolio Site</h1>
 		<nav class="level">
 			<div class="level-item mobile-none"></div>
@@ -65,6 +67,70 @@
 			<p class="has-text-centered"><a class="typeani hoverline" href="#works">Works</a></p>
 		</div>
 	</section>
+	<section class="section about" id="about">
+		<div class="container">
+			<div class="has-text-centered">
+				<h3><span class="typeani line wow">About</span></h3>
+			</div>
+			<h4><span class="wow slideani">安藤 真生 / Masaki Ando</span></h4>
+			<h5><span class="wow slideani">書体デザイナー、グラフィックデザイナー</span></h5>
+			<div class="columns is-variable is-6">
+				<div class="column is-8">
+					<p class="wow fadeIn">
+						1998年岐阜県多治見市生まれ。現在、武蔵野美術大学 視覚伝達デザイン学科3年在学中。
+						<br>2013年、サレジオ工業高等専門学校 デザイン学科入学の際際上京し、2018年同校を卒業、武蔵野美術大学 視覚伝達デザイン学科3年に編入。書体制作のため、ミュリエル・ガチー二西洋書道スクールでも勉強中。
+						<br> 高専5年から書体デザイナーを志し、タイポグラフィーに重きを置いたデザインを行う傍、独学のWebデザイン、コーディングなども行っています。
+						<br> 実家はギャラリーで、2018年からDM/Web制作に携わっています。
+						<br>
+						<br> Wolf + Glyph = Wolph. 社会性を持ち賢いオオカミをモチーフとして、書体選びやタイポグラフィーに重きを置くことをコンセプトとしてWolphという屋号でグラフィックデザイン・Webデザインを中心に活動中。
+					</p>
+				</div>
+				<div class="column">
+					<p class="wow fadeIn">
+						お仕事やその他ご相談は以下の連絡先からお気軽にご相談ください。
+						<br>
+						<br>
+						<a href="https://twitter.com/wolphtype"><span class="icon"><i class="fab fa-twitter fa-lg"></i></span>@wolphtype</a>
+						<br>
+						<a class="btn" data-clipboard-text="contact@wolph.design">
+						<span class="icon"><i class="fas fa-envelope fa-lg"></i></span>contact@wolph.design</a>
+						<br>
+						<a class="btn" id="cpy" data-clipboard-text="contact@wolph.design">
+							メールアドレスをコピー</a>
+					</p>
+				</div>
+			</div>
+			<div class="columns is-variable is-6" style="margin-top: 5rem;">
+				<div class="column skill wow fadeIn">
+					<img src="/img/skill/icon1.svg">
+					<h4>グラフィックデザイン</h4>
+					<p>DM、ポスターなどの他、エディトリアルデザインなども行います。Photoshop, Illustrator, Indesignが使えます。小さなお仕事でもお気軽にご相談ください。</p>
+				</div>
+				<div class="column skill wow fadeIn">
+					<img src="/img/skill/icon2.svg">
+					<h4>Webデザイン/コーディング</h4>
+					<p>デザインからコーディングまでを行います。主に使っているフレームワークはFoundation 6, Bulmaなど。HTML/CSSがメインです。</p>
+				</div>
+				<div class="column skill wow fadeIn">
+					<img src="/img/skill/icon3.svg">
+					<h4>タイプフェイスデザイン</h4>
+					<p>商品やブランドのための欧文書体デザインを行います。仕事として未経験の部分も多くありますので、まずはご相談ください。Glyphsを使っています。</p>
+				</div>
+			</div>
+			<div class="columns is-variable is-6 is-centered">
+				<div class="column skill wow fadeIn is-4">
+					<img src="/img/skill/icon4.svg">
+					<h4>ロゴデザイン/ハンドレタリング/VI</h4>
+					<p>新規事業やプロダクトのためのロゴデザインやレタリングをおこないます。小規模のCI/VIもお手伝いいたします。</p>
+				</div>
+				<div class="column skill wow fadeIn is-4">
+					<img src="/img/skill/icon5.svg">
+					<h4>その他</h4>
+					<p>UI/UXや動画など、経験は乏しいですがやってみたい分野が数多くあります。お手伝いできることがあれば、お気軽にお声がけください！</p>
+				</div>
+			</div>
+		</div>
+	</section>
 	<section class="section works" id="works">
 		<div class="container">
 			<div class="has-text-centered">
@@ -79,7 +145,7 @@
 							<p class="area"><span>School</span><span>Website</span><span>Typeface</span></p>
 						</div>
 					</a>
-					<a href="">
+					<a href="/work/koga.html">
 						<div class="article wow fadeInUp hoverline cover">
 							<img src="img/works/koga/top.svg">
 							<h4>Koga Sans</h4>
@@ -89,7 +155,7 @@
 					</a>
 				</div>
 				<div class="column">
-					<a href="work/teshigoto.html">
+					<a href="/work/teshigoto.html">
 						<div class="article wow fadeInUp hoverline cover">
 							<img src="img/works/teshigoto/top.jpg">
 							<h4>手仕事の営みⅡ</h4>
@@ -97,9 +163,9 @@
 							<p class="area"><span>Work</span><span>Website</span><span>Graphic</span></p>
 						</div>
 					</a>
-					<a href="">
+					<a href="/work/logos.html">
 						<div class="article wow fadeInUp hoverline cover">
-							<img src="img/works/lettering/mauvcd.jpg">
+							<img src="img/works/lettering/top.svg">
 							<h4>ロゴ・レタリング</h4>
 							<h5>Omnibus</h5>
 							<p class="area"><span>Self</span><span>Graphic</span></p>
@@ -115,7 +181,7 @@
 							<p class="area"><span>School</span><span>Website</span></p>
 						</div>
 					</a>
-					<a href="">
+					<a class="gray" href="#">
 						<div class="article wow fadeInUp hoverline cover">
 							<img src="img/works/learn.svg">
 							<h4>他の仕事を見る</h4>
@@ -134,6 +200,19 @@ var scroll = new SmoothScroll('a[href*="#"]');
 </script>
 <script>
 new WOW().init();
+</script>
+<script>
+var clipboard = new ClipboardJS('.btn');
+
+clipboard.on('success', function(e) {
+	console.info('Action:', e.action);
+	console.info('Text:', e.text);
+	console.info('Trigger:', e.trigger);
+	var obj = document.getElementById("cpy");
+	obj.innerHTML = "コピーしました！";
+
+	e.clearSelection();
+});
 </script>
 
 </html>
