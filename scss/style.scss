@@ -3,6 +3,7 @@
 @import "luminous-basic.min";
 @import "../node_modules/bulma/sass/utilities/_all";
 @import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=c1841fd8-ffc8-425b-8213-34cd601dff38");
+
 @font-face {
 	font-family: "Metro Nova Regular";
 	src: url("../fonts/c8c9aba5-f3a6-4e34-a524-70823be702f5.eot?#iefix");
@@ -80,6 +81,7 @@ body {
 	-moz-font-feature-settings: "lnum";
 	-webkit-font-feature-settings: "lnum";
 	font-feature-settings: "lnum";
+
 	a {
 		color: $text;
 	}
@@ -88,6 +90,7 @@ body {
 .icofont {
 	font-family: forwolph !important;
 }
+
 .top {
 	position: absolute;
 	width: 100vw;
@@ -120,6 +123,7 @@ h3 {
 	text-align: center;
 	display: inline-block;
 	margin-bottom: 6rem;
+
 	span {
 		display: inline-block;
 	}
@@ -132,17 +136,21 @@ h3 {
 
 .about {
 	padding-top: 8rem;
+
 	.slideani:after {
 		animation-delay: 0.5s;
 		animation-fill-mode: backwards;
 	}
+
 	h4 {
 		font-family: $bold;
 		font-size: 1.3em;
+
 		@media screen and (min-width: 1024px) and (max-width:1280px) {
 			font-size: 1.1em;
 		}
 	}
+
 	h5 {
 		margin-top: 3px;
 		margin-bottom: 1rem;
@@ -152,20 +160,24 @@ h3 {
 		-webkit-font-feature-settings: "onum";
 		font-feature-settings: "onum";
 	}
+
 	p {
 		font-size: 0.9em;
 		line-height: 1.8;
 		text-align: justify;
 	}
+
 	.icon {
 		transform: translate(-2px, 4px);
 	}
+
 	a {
 		font-family: $bold;
 		position: relative;
 		display: inline-block;
 		overflow: hidden;
 		transition: 0.3s ease-in-out all;
+
 		&:before {
 			content: "";
 			background-color: $sub;
@@ -178,8 +190,10 @@ h3 {
 			transition: 1s ease-in-out all;
 			z-index: -1;
 		}
+
 		&:hover {
 			color: $primary;
+
 			&:before {
 				transform: translateY(-50%) translateX(0%);
 				transition: 0.3s ease-in-out all;
@@ -187,18 +201,22 @@ h3 {
 		}
 	}
 }
-.skill{
-	h4{
+
+.skill {
+	h4 {
 		font-size: 1.1em;
 		text-align: center;
 	}
-	img{
+
+	img {
 		max-height: 6rem;
 	}
 }
+
 #cpy {
 	font-size: 0.8em;
 }
+
 footer {
 	font-size: 0.8em;
 	text-align: center;
@@ -210,6 +228,7 @@ footer {
 	from {
 		width: 0
 	}
+
 	to {
 		width: 100%
 	}
@@ -219,6 +238,7 @@ footer {
 	from {
 		width: 0
 	}
+
 	to {
 		width: 100%
 	}
@@ -228,6 +248,7 @@ footer {
 	from {
 		transform: translateX(0);
 	}
+
 	to {
 		transform: translateX(105%);
 	}
@@ -237,6 +258,7 @@ footer {
 	from {
 		transform: translateX(0);
 	}
+
 	to {
 		transform: translateX(105%);
 	}
@@ -253,6 +275,7 @@ footer {
 	display: inline-block;
 	overflow: hidden;
 	position: relative;
+
 	&:after {
 		transform: translateX(105%);
 		content: "";
@@ -277,6 +300,7 @@ footer {
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	will-change: transform;
+
 	&:before {
 		content: "";
 		display: block;
@@ -295,8 +319,10 @@ footer {
 		-webkit-backface-visibility: hidden;
 		will-change: transform;
 	}
+
 	&:hover {
 		color: $primary;
+
 		&:before {
 			transform: translateY(20%) skewY(-10deg) translateX(0%);
 			transition: 0.3s all ease-in-out;
@@ -313,6 +339,7 @@ footer {
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	will-change: transform;
+
 	&:before {
 		content: "";
 		display: block;
@@ -331,8 +358,10 @@ footer {
 		-webkit-backface-visibility: hidden;
 		will-change: transform;
 	}
+
 	&:hover {
 		color: $primary;
+
 		&:before {
 			transform: translateY(47%) skewY(-10deg) translateX(0%);
 			transition: 0.3s all ease-in-out;
@@ -343,10 +372,12 @@ footer {
 .cover {
 	z-index: auto;
 	position: relative;
+
 	&:before {
 		z-index: 1;
 		mix-blend-mode: multiply;
 	}
+
 	&:after {
 		content: "Go";
 		position: absolute;
@@ -360,6 +391,7 @@ footer {
 		opacity: 0;
 		transition: 1s ease-in-out all;
 	}
+
 	&:hover:after {
 		opacity: 1;
 		transform: translateY(-75%) skewY(-10deg) translateX(-50%);
@@ -373,6 +405,7 @@ footer {
 	overflow: hidden;
 	position: relative;
 	z-index: 2;
+
 	&:before {
 		content: "";
 		display: block;
@@ -394,15 +427,18 @@ footer {
 }
 
 .article {
-	margin-bottom: 8rem;
+	margin-bottom: 6rem;
+
 	h4 {
 		margin-top: 0.5rem;
 		font-family: $bold;
 		font-size: 1.3em;
+
 		@media screen and (min-width: 1024px) and (max-width:1280px) {
 			font-size: 1.1em;
 		}
 	}
+
 	h5 {
 		font-size: 0.7em;
 		margin-top: 0px;
@@ -412,27 +448,33 @@ footer {
 		-webkit-font-feature-settings: "onum";
 		font-feature-settings: "onum";
 	}
+
 	.area {
 		margin-left: 2px;
 		margin-top: 8px;
 		font-size: 0.6em;
 		font-family: "Metro Nova Black";
 		color: $back;
+
 		span {
 			margin-right: 10px;
 			background-color: $primary;
 			padding: 2px 4px;
 		}
 	}
+
 	@include tablet-only {
 		h4 {
 			font-size: 0.8em;
 		}
+
 		h5 {
 			font-size: 0.6em;
 		}
+
 		p {
 			font-size: 0.5em;
+
 			span {
 				margin-right: 8px;
 				padding: 2px 4px;
@@ -441,21 +483,84 @@ footer {
 	}
 }
 
+.allworks {
+	.article {
+		margin-bottom: 4rem;
+
+		h4 {
+			margin-top: 0.5rem;
+			font-family: $bold;
+			font-size: 1em;
+
+			@media screen and (min-width: 1024px) and (max-width:1280px) {
+				font-size: 0.9em;
+			}
+		}
+
+		h5 {
+			font-size: 0.7em;
+			margin-top: 0px;
+			margin-left: 2px;
+			font-variant-numeric: oldstyle-nums;
+			-moz-font-feature-settings: "onum";
+			-webkit-font-feature-settings: "onum";
+			font-feature-settings: "onum";
+		}
+
+		.area {
+			margin-left: 2px;
+			margin-top: 8px;
+			font-size: 0.6em;
+			font-family: "Metro Nova Black";
+			color: $back;
+
+			span {
+				margin-right: 10px;
+				background-color: $primary;
+				padding: 2px 4px;
+			}
+		}
+
+		@include tablet-only {
+			h4 {
+				font-size: 0.8em;
+			}
+
+			h5 {
+				font-size: 0.6em;
+			}
+
+			p {
+				font-size: 0.5em;
+
+				span {
+					margin-right: 8px;
+					padding: 2px 4px;
+				}
+			}
+		}
+	}
+}
+
 .contents {
 	padding-top: 0;
 	margin-top: -1rem;
+
 	.slideani:after {
 		animation-delay: 0.5s;
 		animation-fill-mode: backwards;
 	}
+
 	.workinfo {
 		margin-bottom: 2rem;
+
 		h4 {
 			font-size: 1.5em;
 			font-family: $bold;
 			margin-top: 0.5rem;
 			line-height: 1.3;
 		}
+
 		h5 {
 			margin-top: 1rem;
 			font-family: $body;
@@ -466,17 +571,20 @@ footer {
 			-webkit-font-feature-settings: "onum";
 			font-feature-settings: "onum";
 		}
+
 		.area {
 			margin-top: 1rem;
 			font-size: 0.8em;
 			font-family: "Metro Nova Black";
 			color: $back;
+
 			span {
 				margin-right: 13px;
 				background-color: $primary;
 				padding: 2px 5px;
 			}
 		}
+
 		h6 {
 			margin-top: 0.7em;
 			text-align: center;
@@ -484,26 +592,31 @@ footer {
 			font-family: $boldeg;
 			font-size: 1.2em;
 			border: 2px solid $primary;
+
 			&:before {
 				height: 80%;
 				top: 50%;
 				transform-origin: center center;
 				transform: translateY(-50%) skewY(-10deg) translateX(-101%);
 			}
+
 			&:hover:before {
 				transform-origin: center center;
 				transform: translateY(-50%) skewY(-10deg) translateX(0%);
 			}
 		}
 	}
+
 	.workinfo-mini {
 		margin-bottom: 1rem;
+
 		h4 {
 			font-size: 1.3em;
 			font-family: $bold;
 			margin-top: 0.5rem;
 			line-height: 1.3;
 		}
+
 		h5 {
 			font-family: $body;
 			font-size: 0.8em;
@@ -514,17 +627,22 @@ footer {
 			font-feature-settings: "onum";
 		}
 	}
+
 	.workinfo-mini+p {
 		margin-bottom: 7rem;
 	}
+
 	img {
 		margin: 0.5rem 0;
 	}
+
 	.columns {
 		margin-bottom: 0;
+
 		.column {
 			padding-top: 0;
 			padding-bottom: 0;
+
 			figcaption {
 				font-size: 0.8em;
 				text-align: right;
@@ -532,16 +650,19 @@ footer {
 			}
 		}
 	}
+
 	p {
 		margin: 1rem 0;
 		line-height: 1.8;
 		text-align: justify;
+
 		a {
 			font-family: $bold;
 			position: relative;
 			display: inline-block;
 			overflow: hidden;
 			transition: 0.3s ease-in-out all;
+
 			&:before {
 				content: "";
 				background-color: $sub;
@@ -554,8 +675,10 @@ footer {
 				transition: 1s ease-in-out all;
 				z-index: -1;
 			}
+
 			&:hover {
 				color: $primary;
+
 				&:before {
 					transform: translateY(-50%) translateX(0%);
 					transition: 0.3s ease-in-out all;
@@ -563,8 +686,10 @@ footer {
 			}
 		}
 	}
+
 	.other {
 		margin-top: 3rem;
+
 		h4 {
 			margin-top: -0.5rem;
 			font-size: 1.2em;
@@ -574,6 +699,7 @@ footer {
 
 .gray {
 	opacity: 0.3;
+
 	.cover {
 		&:after {
 			content: "Wait";
@@ -587,6 +713,7 @@ footer {
 	left: 1.3rem;
 	font-size: 2.5em;
 	z-index: 10;
+
 	#backtop {
 		margin-left: 0.8rem;
 	}
@@ -597,6 +724,7 @@ footer {
 		font-size: 2.8em;
 		margin-bottom: 1rem;
 	}
+
 	p {
 		font-size: 1.5em;
 		font-family: $boldeg;
@@ -629,21 +757,26 @@ footer {
 	.mobile-none {
 		display: none;
 	}
+
 	.level #logo {
 		font-size: 2.2em;
 	}
+
 	#topnav {
 		top: 0.3rem;
 		left: 0.8rem;
 		font-size: 2.3em;
+
 		#backtop {
 			margin-left: 0.5rem;
 		}
 	}
+
 	#mobile-menu {
 		display: block;
 		text-align: center;
 		margin-top: -1rem;
+
 		p {
 			text-align: center;
 			margin: 0 1rem;
@@ -652,24 +785,30 @@ footer {
 			font-family: $boldeg;
 		}
 	}
+
 	.article {
 		margin-bottom: 3rem;
 	}
+
 	.works {
 		padding-top: 4rem;
 		padding-bottom: 4rem;
 	}
+
 	.about {
 		padding-top: 4rem;
 	}
+
 	h3 {
 		margin-bottom: 3rem;
 	}
+
 	.contents {
 		p {
 			font-size: 0.9em;
 		}
 	}
+
 	.top {
 		background: #f0f0f0 url("/img/back1mobile.svg") no-repeat center center;
 		background-size: contain;

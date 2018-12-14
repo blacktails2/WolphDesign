@@ -7592,7 +7592,7 @@ footer {
     z-index: -1; }
 
 .article {
-  margin-bottom: 8rem; }
+  margin-bottom: 6rem; }
   .article h4 {
     margin-top: 0.5rem;
     font-family: "Metro Nova Medium", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
@@ -7626,6 +7626,44 @@ footer {
     .article p {
       font-size: 0.5em; }
       .article p span {
+        margin-right: 8px;
+        padding: 2px 4px; } }
+
+.allworks .article {
+  margin-bottom: 4rem; }
+  .allworks .article h4 {
+    margin-top: 0.5rem;
+    font-family: "Metro Nova Medium", "KoburinaGoStdN-W6", "こぶりなゴシック W6 JIS2004", "Koburina Gothic W6 JIS2004", sans-serif;
+    font-size: 1em; }
+    @media screen and (min-width: 1024px) and (max-width: 1280px) {
+      .allworks .article h4 {
+        font-size: 0.9em; } }
+  .allworks .article h5 {
+    font-size: 0.7em;
+    margin-top: 0px;
+    margin-left: 2px;
+    font-variant-numeric: oldstyle-nums;
+    -moz-font-feature-settings: "onum";
+    -webkit-font-feature-settings: "onum";
+    font-feature-settings: "onum"; }
+  .allworks .article .area {
+    margin-left: 2px;
+    margin-top: 8px;
+    font-size: 0.6em;
+    font-family: "Metro Nova Black";
+    color: #F0E5D1; }
+    .allworks .article .area span {
+      margin-right: 10px;
+      background-color: #0B4D58;
+      padding: 2px 4px; }
+  @media screen and (min-width: 769px) and (max-width: 1087px) {
+    .allworks .article h4 {
+      font-size: 0.8em; }
+    .allworks .article h5 {
+      font-size: 0.6em; }
+    .allworks .article p {
+      font-size: 0.5em; }
+      .allworks .article p span {
         margin-right: 8px;
         padding: 2px 4px; } }
 
