@@ -312,9 +312,9 @@ bulma-extensions@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/bulma-extensions/-/bulma-extensions-3.0.0.tgz#420527008f56d5219d0d9b4c743d311cbfecdf63"
 
-bulma@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.1.tgz#73c2e3b2930c90cc272029cbd19918b493fca486"
+bulma@^0.7.2:
+  version "0.7.2"
+  resolved "https://registry.yarnpkg.com/bulma/-/bulma-0.7.2.tgz#8e944377b74c7926558830d38d8e19eaf49f5fb6"
 
 bytes@3.0.0:
   version "3.0.0"
@@ -968,6 +968,10 @@ getpass@^0.1.1:
   resolved "https://registry.yarnpkg.com/getpass/-/getpass-0.1.7.tgz#5eff8e3e684d569ae4cb2b1282604e8ba62149fa"
   dependencies:
     assert-plus "^1.0.0"
+
+gibo@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/gibo/-/gibo-0.1.0.tgz#df4ea3a93866976983e18b04b5c2c3b4c4c20abf"
 
 glob-base@^0.3.0:
   version "0.3.0"

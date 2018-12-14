@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "bulma": "^0.7.1",
+    "bulma": "^0.7.2",
     "bulma-extensions": "^3.0.0",
     "gibo": "^0.1.0",
     "jquery": "^3.3.1",
