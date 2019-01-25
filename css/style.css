@@ -7338,8 +7338,8 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  background: url("/img/back1.svg") no-repeat center center;
-  background-size: contain; }
+  background: url("/img/top2.jpg") no-repeat center center;
+  background-size: cover; }
 
 .backwhite {
   background-color: #f0f0f0; }
@@ -7347,6 +7347,14 @@ body {
 .fullheight {
   height: 100vh;
   background-color: #f0f0f0; }
+  .fullheight .level-item a {
+    color: #FFF; }
+    .fullheight .level-item a:hover {
+      color: #0B4D58; }
+  .fullheight #mobile-menu a {
+    color: #FFF; }
+    .fullheight #mobile-menu a:hover {
+      color: #0B4D58; }
 
 h1 {
   position: absolute;
@@ -7399,7 +7407,8 @@ h3 {
     position: relative;
     display: inline-block;
     overflow: hidden;
-    transition: 0.3s ease-in-out all; }
+    transition: 0.3s ease-in-out all;
+    z-index: 2; }
     .about a:before {
       content: "";
       background-color: #F5C51D;
@@ -7667,6 +7676,9 @@ footer {
         margin-right: 8px;
         padding: 2px 4px; } }
 
+.lum-open {
+  z-index: 100; }
+
 .contents {
   padding-top: 0;
   margin-top: -1rem; }
@@ -7750,7 +7762,9 @@ footer {
       position: relative;
       display: inline-block;
       overflow: hidden;
-      transition: 0.3s ease-in-out all; }
+      transition: 0.3s ease-in-out all;
+      vertical-align: top;
+      z-index: 2; }
       .contents p a:before {
         content: "";
         background-color: #F5C51D;
@@ -7859,5 +7873,5 @@ footer {
   .contents p {
     font-size: 0.9em; }
   .top {
-    background: #f0f0f0 url("/img/back1mobile.svg") no-repeat center center;
-    background-size: contain; } }
+    background: #f0f0f0 url("/img/top2.jpg") no-repeat center center;
+    background-size: cover; } }

@@ -95,8 +95,8 @@ body {
 	position: absolute;
 	width: 100vw;
 	height: 100vh;
-	background: url("/img/back1.svg") no-repeat center center;
-	background-size: contain;
+	background: url("/img/top2.jpg") no-repeat center center;
+	background-size: cover;
 }
 
 .backwhite {
@@ -106,6 +106,18 @@ body {
 .fullheight {
 	height: 100vh;
 	background-color: #f0f0f0;
+	.level-item a{
+		color: #FFF;
+		&:hover{
+			color: $primary;
+		}
+	}
+	#mobile-menu a{
+		color: #FFF;
+		&:hover{
+			color: $primary;
+		}
+	}
 }
 
 h1 {
@@ -177,6 +189,7 @@ h3 {
 		display: inline-block;
 		overflow: hidden;
 		transition: 0.3s ease-in-out all;
+		z-index: 2;
 
 		&:before {
 			content: "";
@@ -541,7 +554,9 @@ footer {
 		}
 	}
 }
-
+.lum-open{
+	z-index: 100;
+}
 .contents {
 	padding-top: 0;
 	margin-top: -1rem;
@@ -606,7 +621,6 @@ footer {
 			}
 		}
 	}
-
 	.workinfo-mini {
 		margin-bottom: 1rem;
 
@@ -662,6 +676,8 @@ footer {
 			display: inline-block;
 			overflow: hidden;
 			transition: 0.3s ease-in-out all;
+			vertical-align: top;
+			z-index: 2;
 
 			&:before {
 				content: "";
@@ -821,7 +837,7 @@ footer {
 	}
 
 	.top {
-		background: #f0f0f0 url("/img/back1mobile.svg") no-repeat center center;
-		background-size: contain;
+		background: #f0f0f0 url("/img/top2.jpg") no-repeat center center;
+		background-size: cover;
 	}
 }

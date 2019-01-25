@@ -1,0 +1,802 @@
+// 1. Import the initial variables
+@import "bulma.min";
+@import "../node_modules/bulma/sass/utilities/_all";
+@import "../node_modules/bulma-extensions/bulma-carousel/dist/css/bulma-carousel";
+$head: "Omen23Geo";
+$body: "Metro Regular",
+"A P-OTF Shuei KakuGo Kin StdN M";
+$bold: "Metro Medium",
+"A P-OTF Shuei KakuGo Kin StdN B";
+$italic: "Metro Italic",
+"A P-OTF Shuei KakuGo Kin StdN M";
+
+@font-face {
+	font-family: "Omen23Geo";
+	src: url("../fonts/Omen23-Geometry.eot");
+	src: url("../fonts/Omen23-Geometry.eot") format("eot"), url("../fonts/Omen23-Geometry.woff2") format("woff2"), url("../fonts/Omen23-Geometry.woff") format("woff");
+}
+
+@font-face {
+	font-family: "Omen23Hum";
+	src: url("../fonts/Omen23-Humanistic.eot");
+	src: url("../fonts/Omen23-Humanistic.eot") format("eot"), url("../fonts/Omen23-Humanistic.woff2") format("woff2"), url("../fonts/Omen23-Humanistic.woff") format("woff");
+}
+
+@font-face {
+	font-family: "A P-OTF Shuei KakuGo Kin StdN B";
+	src: url("../fonts/AP-OTF-ShueiGoKinStdN-B.otf");
+}
+
+@font-face {
+	font-family: "A P-OTF Shuei KakuGo Kin StdN M";
+	src: url("../fonts/AP-OTF-ShueiGoKinStdN-M.otf");
+}
+
+@font-face {
+	font-family: "A P-OTF Shuei KakuGo Kin StdN L";
+	src: url("../fonts/AP-OTF-ShueiGoKinStdN-L.otf");
+}
+
+@import url("http://fast.fonts.net/t/1.css?apiType=css&projectid=953f3b2d-3c13-4d0a-9c2f-700e07d24e3f");
+@font-face {
+	font-family: "Electra Regular";
+	src: url("../fonts/2484dcd2-dcf2-484b-918d-7da956c4c235.eot?#iefix");
+	src: url("../fonts/2484dcd2-dcf2-484b-918d-7da956c4c235.eot?#iefix") format("eot"), url("../fonts/ad23e8ea-1700-49f6-a88a-5986f18d751a.woff2") format("woff2"), url("../fonts/d6007f62-efda-45fe-8db8-a3ec5b2ea83f.woff") format("woff"), url("../fonts/de5f9296-5628-44cf-907f-24bfa5f546f7.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Electra Cursive";
+	src: url("../fonts/f8fabaaa-a89a-4c2d-bdb9-b793028fe0d8.eot?#iefix");
+	src: url("../fonts/f8fabaaa-a89a-4c2d-bdb9-b793028fe0d8.eot?#iefix") format("eot"), url("../fonts/db9b4b81-8b0c-44b9-9d4f-a6c50710cdf9.woff2") format("woff2"), url("../fonts/774910b7-924f-4600-b394-2240e8171258.woff") format("woff"), url("../fonts/d80e24c9-84c9-428d-80cf-532fb88881b3.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Electra Bold";
+	src: url("../fonts/bce0f8ba-d7ba-4304-978d-ac823f140759.eot?#iefix");
+	src: url("../fonts/bce0f8ba-d7ba-4304-978d-ac823f140759.eot?#iefix") format("eot"), url("../fonts/14d09800-0287-4029-a16e-06ef1be45b44.woff2") format("woff2"), url("../fonts/0d50965f-0a17-4888-83b1-1d01986f3ebd.woff") format("woff"), url("../fonts/62a2fc88-4c93-4496-8ae0-23d0c1563a95.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Electra Bold Cursive";
+	src: url("../fonts/a0556c6c-123c-4b3d-a961-0e6f61a5a70f.eot?#iefix");
+	src: url("../fonts/a0556c6c-123c-4b3d-a961-0e6f61a5a70f.eot?#iefix") format("eot"), url("../fonts/4afb54aa-3961-4387-a3fe-19ff952993dc.woff2") format("woff2"), url("../fonts/5ae9e64b-772f-4ff1-b83f-20a83e148d02.woff") format("woff"), url("../fonts/fa5d66dd-8076-4db5-b67c-4d7a927a1c0c.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Electra Display";
+	src: url("../fonts/69f99494-c0e0-42d3-a763-2fa380e14f23.eot?#iefix");
+	src: url("../fonts/69f99494-c0e0-42d3-a763-2fa380e14f23.eot?#iefix") format("eot"), url("../fonts/46ddaa3a-bce8-4eee-9aee-c9118a6ee027.woff2") format("woff2"), url("../fonts/79b5fdb7-61b0-4182-a028-2cc36f481650.woff") format("woff"), url("../fonts/8c460777-5e59-47a8-94e1-e9a3cb96f77b.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Electra Cursive Display";
+	src: url("../fonts/8086611f-32ff-4b45-bf57-7af2ba73fcb4.eot?#iefix");
+	src: url("../fonts/8086611f-32ff-4b45-bf57-7af2ba73fcb4.eot?#iefix") format("eot"), url("../fonts/77d31c60-9a02-462b-9ce3-f409328b806c.woff2") format("woff2"), url("../fonts/ab35ff4b-0190-40cc-9b41-d5571c3b97b5.woff") format("woff"), url("../fonts/eee6b120-6f6b-4512-9633-6c4c0f608c00.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Electra Bold Display";
+	src: url("../fonts/96769b79-acd8-4873-95de-d1a227887e78.eot?#iefix");
+	src: url("../fonts/96769b79-acd8-4873-95de-d1a227887e78.eot?#iefix") format("eot"), url("../fonts/91a40932-c622-4cdf-a330-c98334c84c6f.woff2") format("woff2"), url("../fonts/6a12420d-c0ae-443e-9a85-29a213bf0df1.woff") format("woff"), url("../fonts/3106d0bf-f545-4afb-8e14-b476c5a493c6.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Electra Bd Cursive Disp";
+	src: url("../fonts/627c4008-6853-4212-bc49-2cfb434eebe1.eot?#iefix");
+	src: url("../fonts/627c4008-6853-4212-bc49-2cfb434eebe1.eot?#iefix") format("eot"), url("../fonts/8afa9455-e31b-4079-89b1-9e307897fa06.woff2") format("woff2"), url("../fonts/29c5a64b-e311-466c-8c88-e246386ed241.woff") format("woff"), url("../fonts/810c543d-41fa-4f96-85f1-06ee13363251.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Regular";
+	src: url("../fonts/c8c9aba5-f3a6-4e34-a524-70823be702f5.eot?#iefix");
+	src: url("../fonts/c8c9aba5-f3a6-4e34-a524-70823be702f5.eot?#iefix") format("eot"), url("../fonts/0beca509-b62a-49c5-bc79-57344e00c5ae.woff2") format("woff2"), url("../fonts/969ff0b9-0f7c-4b65-a9c2-839849ffb133.woff") format("woff"), url("../fonts/d7f3eee0-3187-4c2d-87e9-00a566a44133.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Italic";
+	src: url("../fonts/66d7ff67-5bdc-4c85-a9d9-64e30deaea22.eot?#iefix");
+	src: url("../fonts/66d7ff67-5bdc-4c85-a9d9-64e30deaea22.eot?#iefix") format("eot"), url("../fonts/e440d294-bdd8-4b22-bdcb-2c0f6679a4f9.woff2") format("woff2"), url("../fonts/4de130e7-b81a-4e76-91e5-1559407c5d5b.woff") format("woff"), url("../fonts/ea778fb1-f331-47c7-ade0-498bcdb307de.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Medium";
+	src: url("../fonts/26a35b9b-1f91-41c2-b20c-84d24b58cdad.eot?#iefix");
+	src: url("../fonts/26a35b9b-1f91-41c2-b20c-84d24b58cdad.eot?#iefix") format("eot"), url("../fonts/2f7b1a7b-d420-4207-ac42-2dbd0fe2a7f4.woff2") format("woff2"), url("../fonts/a5df6b6f-1bbf-483e-8ec2-d21c4b67fb06.woff") format("woff"), url("../fonts/86a8ea0d-1f5b-485f-a0ab-4d472f615b1e.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Medium It";
+	src: url("../fonts/80778ba4-1f35-4060-b017-c97d3506f1e7.eot?#iefix");
+	src: url("../fonts/80778ba4-1f35-4060-b017-c97d3506f1e7.eot?#iefix") format("eot"), url("../fonts/1a3727a1-88cd-49b0-85d5-a113427be183.woff2") format("woff2"), url("../fonts/5e4a7911-021b-468a-8005-6facc019e31a.woff") format("woff"), url("../fonts/27d987c1-3268-4df4-b94d-6bb6507c42e1.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Bold";
+	src: url("../fonts/fe00c6c6-f343-4307-a1b7-67b964367054.eot?#iefix");
+	src: url("../fonts/fe00c6c6-f343-4307-a1b7-67b964367054.eot?#iefix") format("eot"), url("../fonts/e0cadafe-af3d-4d26-bc6b-3e272ebfb87a.woff2") format("woff2"), url("../fonts/a8179324-e684-440f-a7c4-42006055da74.woff") format("woff"), url("../fonts/0d074e0e-62f2-493c-a19a-6785a1191ec0.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Metro Bold It";
+	src: url("../fonts/2ad72d8b-3445-4183-9c33-e12a06b24b87.eot?#iefix");
+	src: url("../fonts/2ad72d8b-3445-4183-9c33-e12a06b24b87.eot?#iefix") format("eot"), url("../fonts/a7cb616f-46b4-4926-a3b5-488a62ef9164.woff2") format("woff2"), url("../fonts/5d99a16d-3c43-4b20-9279-6deefe2a3f22.woff") format("woff"), url("../fonts/3c5ce01f-2137-49f7-b20b-ba35c033a102.ttf") format("truetype");
+}
+
+body {
+	font-variant-numeric: proportional-nums;
+	-moz-font-feature-settings: "pnum";
+	-webkit-font-feature-settings: "pnum";
+	font-feature-settings: "pnum";
+}
+
+p {
+	font-family: $body;
+	line-height: 1.8;
+	text-align: justify;
+	font-size: 0.9em;
+	margin-top: -7px;
+}
+
+.right {
+	display: inline-block;
+	text-align: right;
+	width: 100%;
+}
+
+.inyo {
+	margin: 2rem 0;
+	padding: 2rem 2rem 1.5rem;
+	p {
+		font-size: 0.8em;
+		font-family: $bold;
+	}
+}
+
+.it {
+	font-family: $italic;
+}
+
+.has-bg-img {
+	background-image: url(../img/top.jpg);
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.hero-body h1 {
+	font-family: "Electra Cursive Display";
+	color: white !important;
+	font-size: 4em !important;
+	text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.4);
+	line-height: 1.4 !important;
+	span {
+		font-family: $head;
+		font-size: 2.3em;
+	}
+}
+
+.hero-body .subtitle {
+	margin-top: 2rem !important;
+	color: white;
+	font-family: "Electra Bold";
+	text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.4);
+}
+
+.img {
+	position: relative;
+	p {
+		position: absolute;
+		background-color: rgba(255, 255, 255, 0.5);
+		bottom: 0.2rem;
+		left: 0;
+		font-size: 0.7em;
+		line-height: 1.4;
+		padding: 0.2rem 0.3rem;
+		font-family: $bold;
+		color: black;
+	}
+}
+
+.omentop {
+	h1 {
+		margin-top: 10rem;
+		font-family: "Electra Cursive Display";
+		color: white !important;
+		font-size: 2.5em !important;
+		line-height: 1.4 !important;
+		span {
+			font-family: $head;
+			font-size: 2.3em;
+		}
+	}
+	.subtitle {
+		margin-top: 1rem !important;
+		color: white;
+		font-family: "Electra Bold";
+	}
+	h4 {
+		margin-top: 3rem;
+		color: white;
+	}
+	textarea {
+		appearance: none;
+		width: 100%;
+		height: 100%;
+		margin: 0;
+		padding: 0.5rem 1rem;
+		background: none;
+		border: none;
+		border-radius: 0;
+		outline: none;
+		font-size: 3.5em;
+		text-align: center;
+		color: white;
+		resize: none;
+		&::-webkit-input-placeholder {
+			color: #555;
+		}
+		/* Firefox */
+		&::-moz-placeholder {
+			color: #555;
+		}
+		/* IE */
+		&:-ms-input-placeholder {
+			color: #555;
+		}
+	}
+}
+
+.lefttest {
+	textarea {
+		font-family: "Omen23Geo";
+	}
+}
+
+.righttest {
+	textarea {
+		font-family: "Omen23Hum";
+	}
+}
+
+.fixed {
+	position: fixed;
+	top: 3rem;
+	width: 100%;
+	max-width: 1344px;
+	z-index: 2;
+}
+
+.hero-head p {
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-align: center;
+	top: 4rem;
+	font-size: 1.5em;
+	a {
+		color: white !important;
+		font-family: "Metro Bold";
+		border: 2px solid white;
+		padding: 0.5rem 1rem;
+		transition: 0.3s ease all;
+		&:hover {
+			background-color: white;
+			color: black !important;
+		}
+	}
+}
+
+.testtype {
+	height: 100vh;
+	border: 30px solid white;
+	border-bottom: none;
+	background-color: #333;
+	.testhead p {
+		position: absolute;
+		left: 0;
+		right: 0;
+		text-align: center;
+		top: 4rem;
+		font-size: 1.5em;
+		z-index: 2;
+		a {
+			color: white !important;
+			font-family: "Metro Bold";
+			border: 2px solid white;
+			padding: 0.5rem 1rem;
+			transition: 0.3s ease all;
+			&:hover {
+				background-color: white;
+				color: black !important;
+			}
+		}
+	}
+}
+
+h3 {
+	font-family: $head;
+	font-size: 4em;
+	text-align: center;
+	margin-bottom: 2rem;
+}
+
+h4 {
+	text-align: center;
+	font-family: "Metro Bold";
+	font-size: 1.5em;
+	margin-top: -2rem;
+	margin-bottom: 3rem;
+}
+
+iframe {
+	margin-bottom: 4rem;
+}
+
+h5 {
+	font-family: "Metro Bold";
+	font-size: 1.1em;
+	margin-bottom: 1.5rem;
+	font-variant-numeric: oldstyle-nums;
+	-moz-font-feature-settings: "onum";
+	-webkit-font-feature-settings: "onum";
+	font-feature-settings: "onum";
+	text-align: center;
+}
+
+.container {
+	padding: 5rem 0;
+}
+
+.about {
+	border-right: 30px solid #333;
+	border-left: 30px solid #333;
+	.inyo {
+		background-color: #f3f3f3;
+	}
+}
+
+$n3: #FC354C;
+.y1880 {
+	.swiper-pagination-bullet-active {
+		background-color: $n3 !important;
+	}
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-container-rtl .swiper-button-prev,
+	.swiper-container-rtl .swiper-button-next {
+		fill: $n3;
+	}
+	border-right: 30px solid $n3;
+	border-left: 30px solid $n3;
+	span {
+		font-family: $bold;
+		color: $n3 !important;
+	}
+	h4 {
+		color: $n3;
+	}
+	a {
+		color: $n3;
+		font-family: $bold;
+		transition: all 0.3s ease;
+		border: 2px solid $n3;
+		padding: 0.3rem;
+		&:hover {
+			color: white;
+			background-color: $n3;
+		}
+	}
+}
+
+.top5 {
+	margin-top: 5rem;
+}
+
+$n4: #0ABFBC;
+$n5: #C8CF02;
+$n6: #E6781E;
+$n7: #82B3AE;
+$n8: #574951;
+$n9: #F8CA00;
+$n10: #036564;
+.y1899 {
+	.swiper-pagination-bullet-active {
+		background-color: $n4 !important;
+	}
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-container-rtl .swiper-button-prev,
+	.swiper-container-rtl .swiper-button-next {
+		fill: $n4;
+	}
+	border-right: 30px solid $n4;
+	border-left: 30px solid $n4;
+	h4 {
+		color: $n4;
+	}
+	a {
+		color: $n4;
+		font-family: $bold;
+		transition: all 0.3s ease;
+		border: 2px solid $n4;
+		padding: 0.3rem;
+		&:hover {
+			color: white;
+			background-color: $n4;
+		}
+	}
+}
+
+.y1910 {
+	.swiper-pagination-bullet-active {
+		background-color: $n5 !important;
+	}
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-container-rtl .swiper-button-prev,
+	.swiper-container-rtl .swiper-button-next {
+		fill: $n5;
+	}
+	border-right: 30px solid $n5;
+	border-left: 30px solid $n5;
+	h4 {
+		color: $n5;
+	}
+}
+
+.y1917 {
+	.swiper-pagination-bullet-active {
+		background-color: $n6 !important;
+	}
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-container-rtl .swiper-button-prev,
+	.swiper-container-rtl .swiper-button-next {
+		fill: $n6;
+	}
+	border-right: 30px solid $n6;
+	border-left: 30px solid $n6;
+	h4 {
+		color: $n6;
+	}
+}
+
+.y1922 {
+	.swiper-pagination-bullet-active {
+		background-color: $n7 !important;
+	}
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-container-rtl .swiper-button-prev,
+	.swiper-container-rtl .swiper-button-next {
+		fill: $n7;
+	}
+	border-right: 30px solid $n7;
+	border-left: 30px solid $n7;
+	h4 {
+		color: $n7;
+	}
+}
+
+.y1933 {
+	.swiper-pagination-bullet-active {
+		background-color: $n8 !important;
+	}
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-container-rtl .swiper-button-prev,
+	.swiper-container-rtl .swiper-button-next {
+		fill: $n8;
+	}
+	border-right: 30px solid $n8;
+	border-left: 30px solid $n8;
+	h4 {
+		color: $n8;
+	}
+}
+
+.type {
+	.swiper-pagination-bullet-active {
+		background-color: $n9 !important;
+	}
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-container-rtl .swiper-button-prev,
+	.swiper-container-rtl .swiper-button-next {
+		fill: $n9;
+	}
+	border-right: 30px solid $n9;
+	border-left: 30px solid $n9;
+	h4 {
+		color: $n9;
+	}
+}
+
+.mario {
+	.swiper-pagination-bullet-active {
+		background-color: $n10 !important;
+	}
+	.swiper-button-next,
+	.swiper-button-prev,
+	.swiper-container-rtl .swiper-button-prev,
+	.swiper-container-rtl .swiper-button-next {
+		fill: $n10;
+	}
+	border-right: 30px solid $n10;
+	border-left: 30px solid $n10;
+	h4 {
+		color: $n10;
+	}
+}
+
+.omen {
+	border-right: 30px solid #333;
+	border-left: 30px solid #333;
+	border-bottom: 30px solid #333;
+	h4 {
+		color: #333;
+	}
+	.next {
+		text-align: center;
+		margin-top: 3rem;
+		margin-bottom: 3rem;
+	}
+	.next a {
+		font-family: $bold;
+		color: #333;
+		font-size: 1.3em;
+		border: 2px solid #333;
+		padding: 0.3rem 0.7rem;
+		margin-top: 2rem;
+		transition: 0.3s ease all;
+		&:hover {
+			background-color: #333;
+			color: white !important;
+		}
+	}
+	#footer {
+		text-align: center;
+		font-size: 0.9em;
+		font-family: "Electra Cursive";
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		left: 0;
+	}
+	textarea {
+		appearance: none;
+		width: 100%;
+		height: 25rem;
+		margin: 0;
+		padding: 0.5rem 1rem;
+		background: none;
+		border: none;
+		border-radius: 0;
+		outline: none;
+		font-size: 3.5em;
+		text-align: center;
+		color: #333;
+		resize: none;
+		&::-webkit-input-placeholder {
+			color: #e5e5e5;
+		}
+		/* Firefox */
+		&::-moz-placeholder {
+			color: #e5e5e5;
+		}
+		/* IE */
+		&:-ms-input-placeholder {
+			color: #e5e5e5;
+		}
+	}
+}
+
+.modal-content {
+	width: 800px;
+	div {
+		background-color: white;
+		padding: 5rem;
+	}
+}
+
+.hero {
+	border: 30px solid white;
+	border-bottom: none;
+}
+
+.link {
+	font-family: "Metro Bold";
+	border: 2px solid #333;
+	padding: 0.5rem 0.8rem;
+	color: #333 !important;
+	background-color: white;
+	transition: 0.3s ease all;
+	&:hover {
+		color: white !important;
+	}
+}
+
+.on {
+	a {
+		color: white !important;
+	}
+	#nav1,
+	#nav2,
+	#nav11 {
+		background-color: #333;
+	}
+	#nav3 {
+		color: white !important;
+		background-color: $n3;
+	}
+	#nav4 {
+		color: white !important;
+		background-color: $n4;
+	}
+	#nav5 {
+		color: white !important;
+		background-color: $n5;
+	}
+	#nav6 {
+		color: white !important;
+		background-color: $n6;
+	}
+	#nav7 {
+		color: white !important;
+		background-color: $n7;
+	}
+	#nav8 {
+		color: white !important;
+		background-color: $n8;
+	}
+	#nav9 {
+		color: white !important;
+		background-color: $n9;
+	}
+	#nav10 {
+		color: white !important;
+		background-color: $n10;
+	}
+}
+
+#nav1,
+#nav2,
+#nav11 {
+	&:hover {
+		background-color: #333;
+	}
+}
+
+#nav3 {
+	border-color: $n3;
+	color: $n3 !important;
+	&:hover {
+		background-color: $n3;
+		color: white !important;
+	}
+}
+
+#nav4 {
+	border-color: $n4;
+	color: $n4 !important;
+	&:hover {
+		background-color: $n4;
+		color: white !important;
+	}
+}
+
+#nav5 {
+	border-color: $n5;
+	color: $n5 !important;
+	&:hover {
+		background-color: $n5;
+		color: white !important;
+	}
+}
+
+#nav6 {
+	border-color: $n6;
+	color: $n6 !important;
+	&:hover {
+		background-color: $n6;
+		color: white !important;
+	}
+}
+
+#nav7 {
+	border-color: $n7;
+	color: $n7 !important;
+	&:hover {
+		background-color: $n7;
+		color: white !important;
+	}
+}
+
+#nav8 {
+	border-color: $n8;
+	color: $n8 !important;
+	&:hover {
+		background-color: $n8;
+		color: white !important;
+	}
+}
+
+#nav9 {
+	border-color: $n9;
+	color: $n9 !important;
+	&:hover {
+		background-color: $n9;
+		color: white !important;
+	}
+}
+
+#nav10 {
+	border-color: $n10;
+	color: $n10 !important;
+	&:hover {
+		background-color: $n10;
+		color: white !important;
+	}
+}
+
+
+.activemenu {
+	background-color: #333;
+	border: 2px solid #333;
+	color: white !important;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 500px;
+	margin-bottom: 7rem !important;
+	margin-top: 3rem !important;
+	img {
+		height: 500px;
+		width: auto;
+	}
+}
+
+.modal img {
+	margin-bottom: 3rem;
+}
+
+.modalfont {
+	img {
+		transition: 0.3s ease all;
+		cursor: pointer;
+		&:hover {
+			opacity: 0.5;
+		}
+	}
+}
+
+.swiper-button-next,
+.swiper-container-rtl .swiper-button-prev,
+.swiper-button-prev,
+.swiper-container-rtl .swiper-button-next {
+	background-image: none;
+}
+
+.yokonaga img {
+	width: 100%;
+	height: auto;
+}
+
+.swiper-slide {
+	text-align: center;
+	font-size: 18px;
+	background: #fff;
+	/* Center slide text vertically */
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
