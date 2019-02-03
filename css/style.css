@@ -7316,6 +7316,26 @@ a.panel-block:hover, label.panel-block:hover {
   src: url("../fonts/forwolph-Regular.eot?#iefix");
   src: url("../fonts/forwolph-Regular.eot?#iefix") format("eot"), url("../fonts/forwolph-Regular.woff2") format("woff2"), url("../fonts/forwolph-Regular.woff") format("woff"); }
 
+@font-face {
+  font-family: "Electra Bold";
+  src: url("../fonts/bce0f8ba-d7ba-4304-978d-ac823f140759.eot?#iefix");
+  src: url("../fonts/bce0f8ba-d7ba-4304-978d-ac823f140759.eot?#iefix") format("eot"), url("../fonts/14d09800-0287-4029-a16e-06ef1be45b44.woff2") format("woff2"), url("../fonts/0d50965f-0a17-4888-83b1-1d01986f3ebd.woff") format("woff"), url("../fonts/62a2fc88-4c93-4496-8ae0-23d0c1563a95.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Electra Bold Cursive";
+  src: url("../fonts/a0556c6c-123c-4b3d-a961-0e6f61a5a70f.eot?#iefix");
+  src: url("../fonts/a0556c6c-123c-4b3d-a961-0e6f61a5a70f.eot?#iefix") format("eot"), url("../fonts/4afb54aa-3961-4387-a3fe-19ff952993dc.woff2") format("woff2"), url("../fonts/5ae9e64b-772f-4ff1-b83f-20a83e148d02.woff") format("woff"), url("../fonts/fa5d66dd-8076-4db5-b67c-4d7a927a1c0c.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Electra Bold Display";
+  src: url("../fonts/96769b79-acd8-4873-95de-d1a227887e78.eot?#iefix");
+  src: url("../fonts/96769b79-acd8-4873-95de-d1a227887e78.eot?#iefix") format("eot"), url("../fonts/91a40932-c622-4cdf-a330-c98334c84c6f.woff2") format("woff2"), url("../fonts/6a12420d-c0ae-443e-9a85-29a213bf0df1.woff") format("woff"), url("../fonts/3106d0bf-f545-4afb-8e14-b476c5a493c6.ttf") format("truetype"); }
+
+@font-face {
+  font-family: "Electra Bold Cursive Display";
+  src: url("../fonts/627c4008-6853-4212-bc49-2cfb434eebe1.eot?#iefix");
+  src: url("../fonts/627c4008-6853-4212-bc49-2cfb434eebe1.eot?#iefix") format("eot"), url("../fonts/8afa9455-e31b-4079-89b1-9e307897fa06.woff2") format("woff2"), url("../fonts/29c5a64b-e311-466c-8c88-e246386ed241.woff") format("woff"), url("../fonts/810c543d-41fa-4f96-85f1-06ee13363251.ttf") format("truetype"); }
+
 body {
   font-family: "Metro Nova Regular", "KoburinaGoStdN-W3", "こぶりなゴシック W3 JIS2004", "Koburina Gothic W3 JIS2004", sans-serif;
   background-color: #F0E5D1;
@@ -7355,6 +7375,85 @@ body {
     color: #FFF; }
     .fullheight #mobile-menu a:hover {
       color: #0B4D58; }
+
+.topbody {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center; }
+  .topbody .container {
+    -webkit-flex-basis: 100%;
+    flex-basis: 100%; }
+  .topbody h2,
+  .topbody h3,
+  .topbody p,
+  .topbody a {
+    color: #FFF; }
+  .topbody h2 {
+    font-family: ElectraLTStd-BoldCursiveDis, 'Electra Bold Cursive Display', serif;
+    font-size: 4em;
+    animation-delay: 0.2s; }
+  .topbody h3 {
+    font-family: 'Electra LT Std Bold Display', 'Electra Bold Display', serif;
+    font-size: 1.5em;
+    margin-top: -10px;
+    border-bottom: 1px solid;
+    text-align: left;
+    display: block;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.3em;
+    animation-delay: 0.4s; }
+  .topbody p {
+    font-family: 'ElectraLTStd-Bold', 'Electra Bold', serif;
+    font-size: 0.9em;
+    line-height: 1.4;
+    animation-delay: 0.6s; }
+    .topbody p a {
+      margin-top: 5px;
+      margin-left: -8px;
+      font-size: 1.2em;
+      font-family: 'ElectraLTStd-BoldCursive', 'Electra Bold Cursive', serif;
+      position: relative;
+      display: inline-block;
+      overflow: hidden;
+      transition: 0.3s ease-in-out all;
+      vertical-align: top;
+      z-index: 2; }
+      .topbody p a:before {
+        content: "";
+        background-color: #F5C51D;
+        transform-origin: center center;
+        position: absolute;
+        height: 80%;
+        width: 100%;
+        top: 50%;
+        transform: translateY(-50%) translateX(-102%);
+        transition: 1s ease-in-out all;
+        z-index: -1; }
+      .topbody p a:hover {
+        color: #0B4D58; }
+        .topbody p a:hover:before {
+          transform: translateY(-50%) translateX(0%);
+          transition: 0.3s ease-in-out all; }
+  @media screen and (min-width: 769px), print {
+    .topbody #topdetail {
+      padding: 2rem; } }
+  @media screen and (max-width: 768px) {
+    .topbody {
+      align-items: flex-end; }
+      .topbody #topdetail {
+        padding: 0 1rem 5rem; } }
+  @media screen and (min-width: 2000px) {
+    .topbody h2 {
+      font-size: 6em; }
+    .topbody h3 {
+      font-size: 2.5em; }
+    .topbody p {
+      font-size: 1.2em; } }
 
 h1 {
   position: absolute;
