@@ -29,7 +29,7 @@
 	<script src="js/smooth-scroll.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-	<script type="text/javascript" src="//typesquare.com/3/tsst/script/ja/typesquare.js?ggfsXn9cZZA%3D&fadein=-1" charset="utf-8"></script>
+	<script type="text/javascript" src="//webfont.fontplus.jp/accessor/script/fontplus.js?qdfWifIcjAc%3D&box=n2AbFjgX4Nk%3D&aa=1&ab=1" charset="utf-8"></script>
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-53606233-5"></script>
 	<script>
@@ -71,13 +71,17 @@
 				<div class="columns">
 					<div class="column"></div>
 					<div class="column is-4-widescreen is-5-desktop is-6-tablet is-12-mobile">
-						<div id="topdetail">
+						<div class="topdetail is-hidden-mobile">
 							<h2 class="animated fadeInRight">Tight in TYPE</h2>
 							<h3 class="animated fadeInRight">from Moji Times</h3>
 							<p class="animated fadeInRight">
 								Tight in TYPE is Composite photograph of buidling of Musashino Art University and my lettering work. The work was exhibited in Moji Times in Art Festival of Musashino Art University.<br>
 								<a href="work/mojitimes.html">»Show Detail</a>
 							</p>
+						</div>
+						<div class="topdetail is-hidden-tablet">
+							<h2 class="animated fadeInRight">Tight in TYPE</h2>
+							<p class="animated fadeInRight"><a href="work/mojitimes.html">»Show Detail</a></p>
 						</div>
 					</div>
 				</div>
@@ -119,31 +123,19 @@
 			</div>
 			<div class="columns is-variable is-6 is-hidden-mobile" style="margin-top: 5rem;">
 				<div class="column skill wow fadeIn">
+					<img src="/img/skill/icon31.svg">
+					<h4>タイプフェイスデザイン</h4>
+					<p>商品、個人使用問わず欧文書体の制作を行います。レタリングやロゴ制作、小規模なCIなども。</p>
+				</div>
+				<div class="column skill wow fadeIn">
 					<img src="/img/skill/icon1.svg">
 					<h4>グラフィックデザイン</h4>
-					<p>DM、ポスターなどの他、エディトリアルデザインなども行います。Photoshop, Illustrator, Indesignが使えます。小さなお仕事でもお気軽にご相談ください。</p>
+					<p>DM、ポスターや名刺といった小さな仕事を行います。小さなことからなんでもご相談ください！</p>
 				</div>
 				<div class="column skill wow fadeIn">
 					<img src="/img/skill/icon21.svg">
 					<h4>Webデザイン/コーディング</h4>
-					<p>デザインからコーディングまでを行います。主に使っているフレームワークはFoundation 6, Bulmaなど。HTML/CSSがメインです。</p>
-				</div>
-				<div class="column skill wow fadeIn">
-					<img src="/img/skill/icon31.svg">
-					<h4>タイプフェイスデザイン</h4>
-					<p>商品やブランドのための欧文書体デザインを行います。仕事として未経験の部分も多くありますので、まずはご相談ください。Glyphsを使っています。</p>
-				</div>
-			</div>
-			<div class="columns is-variable is-6 is-centered is-hidden-mobile">
-				<div class="column skill wow fadeIn is-4">
-					<img src="/img/skill/icon4.svg">
-					<h4>ロゴデザイン/ハンドレタリング/VI</h4>
-					<p>新規事業やプロダクトのためのロゴデザインやレタリングをおこないます。小規模のCI/VIもお手伝いいたします。</p>
-				</div>
-				<div class="column skill wow fadeIn is-4">
-					<img src="/img/skill/icon51.svg">
-					<h4>その他</h4>
-					<p>UI/UXや動画など、経験は乏しいですがやってみたい分野が数多くあります。お手伝いできることがあれば、お気軽にお声がけください！</p>
+					<p>LPや小規模な静的Webサイトの制作もします。Figmaを通してデザインし、コーディングまで行います。</p>
 				</div>
 			</div>
 		</div>
@@ -153,10 +145,10 @@
 			<div class="has-text-centered">
 				<h3><span class="typeani line wow">Works</span></h3>
 			</div>
-			<div class="columns is-variable is-6 is-multiline">
+			<div class="columns is-variable is-4 is-multiline">
 				<div class="column is-4">
 					<a href="/work/logos.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/lettering/top.svg">
 							<h4>ロゴ・レタリング</h4>
 							<h5>Omnibus</h5>
@@ -166,7 +158,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/blog.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/blog.svg">
 							<h4>Wolph.design blog</h4>
 							<h5>Contributing Irregularly</h5>
@@ -176,7 +168,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/koga.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/koga/top.svg">
 							<h4>Koga Sans</h4>
 							<h5>Since March, 2018</h5>
@@ -186,7 +178,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/ginsai.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/ginsai/top.svg">
 							<h4>ぎんさい</h4>
 							<h5>December, 2018</h5>
@@ -196,7 +188,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/walbaum.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/walbaum/top.jpg">
 							<h4>The Specimens Of Walbaum in Today</h4>
 							<h5>December, 2018</h5>
@@ -206,7 +198,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/malice.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/malice/top.svg">
 							<h4>Poison of Malice</h4>
 							<h5>December, 2018</h5>
@@ -216,7 +208,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/seikichi.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/seikichi/top.jpg">
 							<h4>長谷川清吉展</h4>
 							<h5>November, 2018</h5>
@@ -226,7 +218,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/mojitimes.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/mojitimes/top.jpg">
 							<h4>武蔵野美術大学芸術祭 “もじTIMES”</h4>
 							<h5>November, 2018</h5>
@@ -236,7 +228,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/sanimuho.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/sanimuho/top.jpg">
 							<h4>蚕衣無縫展 XI</h4>
 							<h5>October, 2018</h5>
@@ -246,7 +238,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/keiji.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/keiji/top.jpg">
 							<h4>伊藤慶二展</h4>
 							<h5>October, 2018</h5>
@@ -256,7 +248,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/dwiggins.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/dwiggins/top.jpg">
 							<h4>A History and Typeface of WAD</h4>
 							<h5>September, 2018</h5>
@@ -266,7 +258,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/teshigoto.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/teshigoto/top.jpg">
 							<h4>手仕事の営みⅡ</h4>
 							<h5>August, 2018</h5>
@@ -276,7 +268,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/natumomo.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="/img/works/natumomo/top.jpg">
 							<h4>百草夏百種展</h4>
 							<h5>July, 2018</h5>
@@ -286,7 +278,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/kaitaku.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="/img/works/kaitaku/top.jpg">
 							<h4>優良食事店開拓研究会</h4>
 							<h5>July, 2018</h5>
@@ -296,7 +288,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/vcdocan.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="img/works/vcdocan/top.jpg">
 							<h4>武蔵野美術大学 視デOC</h4>
 							<h5>June, 2018</h5>
@@ -306,7 +298,7 @@
 				</div>
 				<div class="column is-4">
 					<a href="/work/eatfes.html">
-						<div class="article wow fadeInUp hoverline cover">
+						<div class="article wow fadeIn hoverline cover">
 							<img src="/img/works/eatfes/top.jpg">
 							<h4>秋川渓谷eat思うよFES</h4>
 							<h5>May, 2018</h5>

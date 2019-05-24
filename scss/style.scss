@@ -77,14 +77,12 @@
 }
 
 $body: "Metro Nova Regular",
+"TazuganeGothicStdN-Book",
 "KoburinaGoStdN-W3",
-"こぶりなゴシック W3 JIS2004",
-"Koburina Gothic W3 JIS2004",
 sans-serif;
-$bold: "Metro Nova Medium",
+$bold: "Metro Nova Bold",
+"TazuganeGothicStdN-Bold",
 "KoburinaGoStdN-W6",
-"こぶりなゴシック W6 JIS2004",
-"Koburina Gothic W6 JIS2004",
 sans-serif;
 $boldeg: "Metro Nova Bold",
 sans-serif;
@@ -122,6 +120,18 @@ body {
 	height: 100vh;
 	background: url("/img/top2.jpg") no-repeat center center;
 	background-size: cover;
+
+	@include desktop {
+		background-attachment: fixed;
+	}
+
+	@include tablet-only {
+		background-position: 30% center;
+	}
+
+	@include mobile {
+		background-position: 10% center;
+	}
 }
 
 .backwhite {
@@ -157,11 +167,13 @@ body {
 	left: 0;
 	display: flex;
 	-webkit-align-items: center;
-	        align-items: center;
-	.container{
+	align-items: center;
+
+	.container {
 		-webkit-flex-basis: 100%;
-		        flex-basis: 100%;
+		flex-basis: 100%;
 	}
+
 	h2,
 	h3,
 	p,
@@ -228,25 +240,34 @@ body {
 			}
 		}
 	}
-	@include tablet{
-		#topdetail{
+
+	@include tablet-only {
+		.topdetail {
 			padding: 2rem;
 		}
 	}
-	@include mobile{
+
+	@include mobile {
 		align-items: flex-end;
-		#topdetail{
-			padding: 0 1rem 5rem;
+		h2{
+			font-size: 1.8em;
+			margin-bottom: -0.5rem;
+		}
+		.topdetail {
+			padding: 0 1rem 3rem;
 		}
 	}
-	@media screen and (min-width: 2000px){
-		h2{
+
+	@media screen and (min-width: 2000px) {
+		h2 {
 			font-size: 6em;
 		}
-		h3{
+
+		h3 {
 			font-size: 2.5em;
 		}
-		p{
+
+		p {
 			font-size: 1.2em;
 		}
 	}
@@ -288,7 +309,7 @@ h3 {
 
 	h4 {
 		font-family: $bold;
-		font-size: 1.3em;
+		font-size: 1.2em;
 
 		@media screen and (min-width: 1024px) and (max-width:1280px) {
 			font-size: 1.1em;
@@ -572,15 +593,15 @@ footer {
 }
 
 .article {
-	margin-bottom: 6rem;
+	margin-bottom: 5rem;
 
 	h4 {
 		margin-top: 0.5rem;
 		font-family: $bold;
-		font-size: 1.3em;
+		font-size: 1em;
 
 		@media screen and (min-width: 1024px) and (max-width:1280px) {
-			font-size: 1.1em;
+			font-size: 0.9em;
 		}
 	}
 
@@ -596,7 +617,7 @@ footer {
 
 	.area {
 		margin-left: 2px;
-		margin-top: 8px;
+		margin-top: 6px;
 		font-size: 0.6em;
 		font-family: "Metro Nova Black";
 		color: $back;
@@ -604,7 +625,7 @@ footer {
 		span {
 			margin-right: 10px;
 			background-color: $primary;
-			padding: 2px 4px;
+			padding: 1px 4px 2px;
 		}
 	}
 
@@ -704,14 +725,14 @@ footer {
 		margin-bottom: 2rem;
 
 		h4 {
-			font-size: 1.5em;
+			font-size: 1.2em;
 			font-family: $bold;
-			margin-top: 0.3rem;
+			margin-top: 0.4rem;
 			line-height: 1.3;
 		}
 
 		h5 {
-			margin-top: 1rem;
+			margin-top: 0.3rem;
 			font-family: $body;
 			font-size: 0.8em;
 			line-height: 1.5;
@@ -722,7 +743,7 @@ footer {
 		}
 
 		.area {
-			margin-top: 1rem;
+			margin-top: 0.5rem;
 			font-size: 0.8em;
 			font-family: "Metro Nova Black";
 			color: $back;
@@ -843,7 +864,7 @@ footer {
 
 		h4 {
 			margin-top: -0.5rem;
-			font-size: 1.2em;
+			font-size: 1em;
 		}
 	}
 }
@@ -921,6 +942,10 @@ footer {
 }
 
 @include mobile {
+	.section {
+		padding: 2rem 1.2rem;
+	}
+
 	.mobile-none {
 		display: none;
 	}
@@ -972,12 +997,19 @@ footer {
 
 	.contents {
 		p {
-			font-size: 0.9em;
+			font-size: 0.8em;
+		}
+
+		img {
+			width: 100vw;
+			max-width: 100vw;
+			margin-left: calc(((100vw - 100%) / 2) * -1);
+			margin-right: calc(((100vw - 100%) / 2) * -1);
 		}
 	}
 
 	.top {
-		background: #f0f0f0 url("/img/top2.jpg") no-repeat center center;
+		background: #f0f0f0 url("/img/top2.jpg") no-repeat 15% center;
 		background-size: cover;
 	}
 }
