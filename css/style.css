@@ -7353,9 +7353,15 @@ body {
 .icofont {
   font-family: forwolph !important; }
 
+#scene {
+  position: absolute;
+  width: 150vw;
+  height: 100vh;
+  left: -50%; }
+
 .top {
   position: absolute;
-  width: 100vw;
+  width: 150vw;
   height: 100vh;
   background: url("/img/top2.jpg") no-repeat center center;
   background-size: cover; }
@@ -7367,6 +7373,22 @@ body {
       background-position: 30% center; } }
   @media screen and (max-width: 768px) {
     .top {
+      background-position: 10% center; } }
+
+.top2 {
+  position: absolute;
+  width: 150vw;
+  height: 100vh;
+  background: url("/img/top2-1.png") no-repeat center center;
+  background-size: cover; }
+  @media screen and (min-width: 1088px) {
+    .top2 {
+      background-attachment: fixed; } }
+  @media screen and (min-width: 769px) and (max-width: 1087px) {
+    .top2 {
+      background-position: 30% center; } }
+  @media screen and (max-width: 768px) {
+    .top2 {
       background-position: 10% center; } }
 
 .backwhite {
@@ -7891,6 +7913,8 @@ footer {
         .contents p a:hover:before {
           transform: translateY(-50%) translateX(0%);
           transition: 0.3s ease-in-out all; }
+    .contents p strong {
+      font-family: "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif; }
   .contents .other {
     margin-top: 3rem; }
     .contents .other h4 {

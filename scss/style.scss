@@ -113,12 +113,36 @@ body {
 .icofont {
 	font-family: forwolph !important;
 }
-
+#scene{
+	position: absolute;
+	width: 150vw;
+	height: 100vh;
+	left: -50%;
+}
 .top {
 	position: absolute;
-	width: 100vw;
+	width: 150vw;
 	height: 100vh;
 	background: url("/img/top2.jpg") no-repeat center center;
+	background-size: cover;
+
+	@include desktop {
+		background-attachment: fixed;
+	}
+
+	@include tablet-only {
+		background-position: 30% center;
+	}
+
+	@include mobile {
+		background-position: 10% center;
+	}
+}
+.top2{
+		position: absolute;
+	width: 150vw;
+	height: 100vh;
+	background: url("/img/top2-1.png") no-repeat center center;
 	background-size: cover;
 
 	@include desktop {
@@ -856,6 +880,9 @@ footer {
 					transition: 0.3s ease-in-out all;
 				}
 			}
+		}
+		strong{
+			font-family: $bold;
 		}
 	}
 
