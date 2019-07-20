@@ -13,7 +13,7 @@
 	<meta name="twitter:site" content="＠wolphtype" />
 	<meta name="twitter:player" content="＠wolphtype" />
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<title>Poison of Malice / Wolph</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" href="/css/style.css">
@@ -38,10 +38,22 @@
 
 <body>
 	<div id="topnav">
-		<p class="icofont"><a id="totop" class="hoverico" href="#"><span class="typeani">s</span></a><a id="backtop" class="hoverico" href="/index.html"><span class="typeani">h</span></a></p>
+		<p class="icofont"><a id="backtop" class="hoverico" href="/index.html"><span class="typeani">h</span></a></p>
 	</div>
-	<section class="section">
-		<h1 class="fadeOutUp animated">Wolph: Masaki Ando Portfolio Site</h1>
+	<div class="worktop">
+		<div class="fadeIn animated worktop_image" style='background-image:  url("../img/works/malice/top.svg") ;'></div>
+		<div class="workinfo">
+					<h4><span class="slideani wow">
+							Poison of Malice
+					</span></h4>
+								<h5><span class="slideani wow">
+						December, 2018 / MAU VCD / Writing Space Design Class
+					</span></h5>
+								<p class="area slideani wow"><span>School</span><span>Typeface</span></p>
+		</div>
+	</div>
+	<section class="section toplogo">
+		<h1 class="fadeOutUp animated">Wolph; Masaki Ando Portfolio Site</h1>
 		<nav class="level">
 			<div class="level-item"></div>
 			<div class="level-item"></div>
@@ -56,22 +68,7 @@
 		<div class="container">
 			<div class="columns is-centered">
 				<div class="column is-9">
-					<img class="fadeIn animated" src="../img/works/malice/top.svg">
-					<div class="workinfo">
-						<div class="columns is-variable is-1">
-							<div class="column is-10">
-								<h4><span class="slideani wow">
-						Poison of Malice
-					</span></h4>
-								<h5><span class="slideani wow">
-						December, 2018<br>
-						MAU VCD<br>Writing Space Design Class
-					</span></h5>
-								<p class="area slideani wow"><span>School</span><span>Typeface</span></p>
-							</div>
-						</div>
-					</div>
-					<p class="wow fadeInUp">
+					<p class="wow fadeIn">
 						武蔵野美術大学3年生の授業、後期ライティングスペースの授業作品の一部として可読性の悪さをコンセプトにした書体を制作しました。前期の <a href="dwiggins.html">“A History and Typeface of William Addison Dwiggins”</a> と違い、後期のライティングスペースデザインでは4、5人でのグループで進めていきます。授業のテーマは「地球をつくる」。これは、ここ何年にもわたって変わらないテーマとなっています。私たちは、「毒の惑星」と題し、「毒」をテーマに調査と話し合いを重ねていきました。
 					</p>
 					<div class="columns wow fadeIn">
@@ -139,9 +136,9 @@ var scroll = new SmoothScroll('a[href*="#"]');
 new WOW().init();
 </script>
 <script>
-	window.addEventListener("load", () => {
-  const instance = Layzr({threshold: 2}); //thresholdを追加
-  instance.update().handlers(true);
+window.addEventListener("load", () => {
+	const instance = Layzr({ threshold: 2 }); //thresholdを追加
+	instance.update().handlers(true);
 });
 </script>
 <script>

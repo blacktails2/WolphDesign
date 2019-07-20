@@ -13,7 +13,7 @@
 	<meta name="twitter:site" content="＠wolphtype" />
 	<meta name="twitter:player" content="＠wolphtype" />
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<title>A History and Typeface of WAD / Wolph</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" href="/css/style.css">
@@ -38,10 +38,24 @@
 
 <body>
 	<div id="topnav">
-		<p class="icofont"><a id="totop" class="hoverico" href="#"><span class="typeani">s</span></a><a id="backtop" class="hoverico" href="/index.html"><span class="typeani">h</span></a></p>
+		<p class="icofont"><a id="backtop" class="hoverico" href="/index.html"><span class="typeani">h</span></a></p>
 	</div>
-	<section class="section">
-		<h1 class="fadeOutUp animated">Wolph: Masaki Ando Portfolio Site</h1>
+<div class="worktop">
+		<div class="fadeIn animated worktop_image" style='background-image:  url("/img/works/dwiggins/top-high.jpg") ;'></div>
+		<div class="workinfo">
+					<h4><span class="slideani wow">
+							A History and Typeface of William Addison Dwiggins
+					</span></h4>
+								<h5><span class="slideani wow">
+						September, 2018 / MAU VCD / Writing Space Design Class
+					</span></h5>
+								<p class="area slideani wow"><span>School</span><span>Website</span><span>Typeface</span></p>
+							
+					<a href=""><h6 class="animated fadeIn hoverline">Go Site</h6></a>
+		</div>
+	</div>
+	<section class="section toplogo">
+		<h1 class="fadeOutUp animated">Wolph; Masaki Ando Portfolio Site</h1>
 		<nav class="level">
 			<div class="level-item"></div>
 			<div class="level-item"></div>
@@ -56,25 +70,7 @@
 		<div class="container">
 			<div class="columns is-centered">
 				<div class="column is-9">
-					<img class="fadeIn animated" src="/img/works/dwiggins/top-high.jpg">
-					<div class="workinfo">
-						<div class="columns is-variable is-1">
-							<div class="column is-10">
-								<h4><span class="slideani wow">
-						A History and Typeface of William Addison Dwiggins
-					</span></h4>
-								<h5><span class="slideani wow">
-						September, 2018<br>
-						MAU VCD<br>Writing Space Design Class
-					</span></h5>
-								<p class="area slideani wow"><span>School</span><span>Website</span><span>Typeface</span></p>
-							</div>
-							<div class="column">
-								<a href=""><h6 class="animated fadeIn hoverline">Go Site</h6></a>
-							</div>
-						</div>
-					</div>
-					<p class="wow fadeInUp">
+					<p class="wow fadeIn">
 						武蔵野美術大学
 					</p>
 				</div>
@@ -90,9 +86,9 @@ var scroll = new SmoothScroll('a[href*="#"]');
 new WOW().init();
 </script>
 <script>
-	window.addEventListener("load", () => {
-  const instance = Layzr({threshold: 2}); //thresholdを追加
-  instance.update().handlers(true);
+window.addEventListener("load", () => {
+	const instance = Layzr({ threshold: 2 }); //thresholdを追加
+	instance.update().handlers(true);
 });
 </script>
 

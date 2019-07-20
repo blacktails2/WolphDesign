@@ -20,7 +20,7 @@
 	<meta name="msapplication-TileColor" content="#f0e5d1">
 	<meta name="theme-color" content="#0b4d58">
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<title>Wolph / Masaki Ando</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" href="css/style.css">
@@ -48,8 +48,18 @@
 		<p class="icofont"><a id="totop" class="typeani hoverline" href="#">s</a></p>
 	</div>
 	<div id="scene">
-		<div class="top animated fadeIn" data-depth='0.2'></div>
-		<div class="top2 animated fadeIn" data-depth='0.5'></div>
+		<div class="top animated fadeIn">
+			<div id="top-img1"></div>
+		</div>
+		<div class="top animated fadeIn" data-depth='0.1'>
+			<div id="top-img2"></div>
+		</div>
+		<div class="top animated fadeIn" data-depth='0.4'>
+			<div id="top-img3"></div>
+		</div>
+		<div class="top animated fadeIn" data-depth='0.9'>
+			<div id="top-img4"></div>
+		</div>
 	</div>
 	<section class="section fullheight">
 		<h1 class="fadeOutUp animated">Wolph: Masaki Ando Portfolio Site</h1>
@@ -71,25 +81,7 @@
 			<p class="has-text-centered"><a class="typeani hoverline" href="#works">Works</a></p>
 		</div>
 		<div class="topbody">
-			<div class="container is-fluid">
-				<div class="columns">
-					<div class="column"></div>
-					<div class="column is-4-widescreen is-5-desktop is-6-tablet is-12-mobile">
-						<div class="topdetail is-hidden-mobile">
-							<h2 class="animated fadeInRight">Tight in TYPE</h2>
-							<h3 class="animated fadeInRight">from Moji Times</h3>
-							<p class="animated fadeInRight">
-								Tight in TYPE is Composite photograph of buidling of Musashino Art University and my lettering work. The work was exhibited in Moji Times in Art Festival of Musashino Art University.<br>
-								<a href="work/mojitimes.html">»Show Detail</a>
-							</p>
-						</div>
-						<div class="topdetail is-hidden-tablet">
-							<h2 class="animated fadeInRight">Tight in TYPE</h2>
-							<p class="animated fadeInRight"><a href="work/mojitimes.html">»Show Detail</a></p>
-						</div>
-					</div>
-				</div>
-			</div>
+			<a href="work/koga.html"><p class="hoverline">Go Koga Sans</p></a>
 		</div>
 	</section>
 	<section class="section about" id="about">
@@ -102,12 +94,12 @@
 			<div class="columns is-variable is-6">
 				<div class="column is-8">
 					<p class="wow fadeIn">
-						1998年岐阜県多治見市生まれ。現在、武蔵野美術大学 視覚伝達デザイン学科3年在学中。
-						<br>2013年、サレジオ工業高等専門学校 デザイン学科入学の際際上京し、2018年同校を卒業、武蔵野美術大学 視覚伝達デザイン学科3年に編入。書体制作のため、ミュリエル・ガチーニ西洋書道スクールでも勉強中。
+						1998年岐阜県多治見市生まれ。現在、武蔵野美術大学 視覚伝達デザイン学科4年在学中。
+						<br>2013年、サレジオ工業高等専門学校 デザイン学科入学の際際上京し、2018年同校を卒業、武蔵野美術大学 視覚伝達デザイン学科3年に編入。書体制作のため、ミュリエル・ガチーニ西洋書道スクールでも勉強中。2019年4月から日本デザインセンター・オンスクリーン制作室でアルバイトを始める。
 						<br> 高専5年から書体デザイナーを志し、タイポグラフィーに重きを置いたデザインを行う傍、独学のWebデザイン、コーディングなども行っています。
 						<br> 実家はギャラリーで、2018年からDM/Web制作に携わっています。
 						<br>
-						<br> Wolf + Glyph = Wolph. 社会性を持ち賢いオオカミをモチーフとして、書体選びやタイポグラフィーに重きを置くことをコンセプトとしてWolphという屋号でグラフィックデザイン・Webデザインを中心に活動中。
+						<br> Wolf + Glyph = Wolph. 社会性を持ち賢いオオカミをモチーフとして、書体選びやタイポグラフィーに重きを置くことをコンセプトとしてWolphという屋号で書体デザイン・グラフィックデザイン・Webデザインを中心に活動中。
 					</p>
 				</div>
 				<div class="column">
@@ -118,7 +110,7 @@
 						<a href="https://twitter.com/wolphtype"><span class="icon"><i class="fab fa-twitter fa-lg"></i></span>@wolphtype</a>
 						<br>
 						<a class="btn" data-clipboard-text="contact@wolph.design">
-						<span class="icon"><i class="fas fa-envelope fa-lg"></i></span>contact@wolph.design</a>
+							<span class="icon"><i class="fas fa-envelope fa-lg"></i></span>contact@wolph.design</a>
 						<br>
 						<a class="btn" id="cpy" data-clipboard-text="contact@wolph.design">
 							メールアドレスをコピー</a>
@@ -335,7 +327,7 @@ clipboard.on('success', function(e) {
 });
 </script>
 <script>
-	var scene = document.getElementById('scene');
+var scene = document.getElementById('scene');
 var parallaxInstance = new Parallax(scene);
 </script>
 

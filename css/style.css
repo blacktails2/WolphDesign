@@ -7335,8 +7335,11 @@ a.panel-block:hover, label.panel-block:hover {
   src: url("../fonts/627c4008-6853-4212-bc49-2cfb434eebe1.eot?#iefix");
   src: url("../fonts/627c4008-6853-4212-bc49-2cfb434eebe1.eot?#iefix") format("eot"), url("../fonts/8afa9455-e31b-4079-89b1-9e307897fa06.woff2") format("woff2"), url("../fonts/29c5a64b-e311-466c-8c88-e246386ed241.woff") format("woff"), url("../fonts/810c543d-41fa-4f96-85f1-06ee13363251.ttf") format("truetype"); }
 
+html {
+  background-color: #F0E5D1; }
+
 body {
-  font-family: "Metro Nova Regular", "TazuganeGothicStdN-Book", "KoburinaGoStdN-W3", sans-serif;
+  font-family: "MetroNovaPro-Regular", "Metro Nova Regular", "TazuganeGothicStdN-Book", "KoburinaGoStdN-W3", sans-serif;
   background-color: #F0E5D1;
   color: #333;
   font-kerning: normal;
@@ -7355,41 +7358,59 @@ body {
 
 #scene {
   position: absolute;
-  width: 150vw;
+  width: 100vw;
   height: 100vh;
-  left: -50%; }
+  overflow: hidden; }
 
 .top {
-  position: absolute;
-  width: 150vw;
-  height: 100vh;
-  background: url("/img/top2.jpg") no-repeat center center;
-  background-size: cover; }
-  @media screen and (min-width: 1088px) {
-    .top {
-      background-attachment: fixed; } }
-  @media screen and (min-width: 769px) and (max-width: 1087px) {
-    .top {
-      background-position: 30% center; } }
-  @media screen and (max-width: 768px) {
-    .top {
-      background-position: 10% center; } }
-
-.top2 {
-  position: absolute;
-  width: 150vw;
-  height: 100vh;
-  background: url("/img/top2-1.png") no-repeat center center;
-  background-size: cover; }
-  @media screen and (min-width: 1088px) {
-    .top2 {
-      background-attachment: fixed; } }
-  @media screen and (min-width: 769px) and (max-width: 1087px) {
-    .top2 {
-      background-position: 30% center; } }
-  @media screen and (max-width: 768px) {
-    .top2 {
-      background-position: 10% center; } }
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  mix-blend-mode: multiply; }
+  .top #top-img1 {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    background: url("/img/top4.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed; }
+    @media screen and (min-width: 769px) and (max-width: 1087px) {
+      .top #top-img1 {
+        background-attachment: scroll; } }
+    @media screen and (max-width: 768px) {
+      .top #top-img1 {
+        background-attachment: scroll; } }
+  .top #top-img2 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: url("/img/top4-1.svgz") no-repeat center center;
+    background-size: cover; }
+  .top #top-img3 {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    background: url("/img/top4-2.svgz") no-repeat center center;
+    background-size: cover;
+    filter: drop-shadow(7px 13px 8px rgba(0, 0, 0, 0.2)); }
+  .top #top-img4 {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    left: -10%;
+    top: -10%;
+    background: url("/img/top4-3.svgz") no-repeat center center;
+    background-size: cover;
+    filter: drop-shadow(7px 13px 8px rgba(0, 0, 0, 0.2)); }
 
 .backwhite {
   background-color: #f0f0f0; }
@@ -7398,11 +7419,11 @@ body {
   height: 100vh;
   background-color: #f0f0f0; }
   .fullheight .level-item a {
-    color: #FFF; }
+    color: #333; }
     .fullheight .level-item a:hover {
       color: #0B4D58; }
   .fullheight #mobile-menu a {
-    color: #FFF; }
+    color: #333; }
     .fullheight #mobile-menu a:hover {
       color: #0B4D58; }
 
@@ -7411,82 +7432,27 @@ body {
   width: 100vw;
   height: 100vh;
   top: 0;
-  left: 0;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center; }
-  .topbody .container {
-    -webkit-flex-basis: 100%;
-    flex-basis: 100%; }
-  .topbody h2,
-  .topbody h3,
-  .topbody p,
-  .topbody a {
-    color: #FFF; }
-  .topbody h2 {
-    font-family: ElectraLTStd-BoldCursiveDis, 'Electra Bold Cursive Display', serif;
-    font-size: 4em;
-    animation-delay: 0.2s; }
-  .topbody h3 {
-    font-family: 'Electra LT Std Bold Display', 'Electra Bold Display', serif;
-    font-size: 1.5em;
-    margin-top: -10px;
-    border-bottom: 1px solid;
-    text-align: left;
-    display: block;
-    padding-bottom: 0.2em;
-    margin-bottom: 0.3em;
-    animation-delay: 0.4s; }
+  left: 0; }
   .topbody p {
-    font-family: 'ElectraLTStd-Bold', 'Electra Bold', serif;
-    font-size: 0.9em;
-    line-height: 1.4;
-    animation-delay: 0.6s; }
-    .topbody p a {
-      margin-top: 5px;
-      margin-left: -8px;
-      font-size: 1.2em;
-      font-family: 'ElectraLTStd-BoldCursive', 'Electra Bold Cursive', serif;
-      position: relative;
-      display: inline-block;
-      overflow: hidden;
-      transition: 0.3s ease-in-out all;
-      vertical-align: top;
-      z-index: 2; }
-      .topbody p a:before {
-        content: "";
-        background-color: #F5C51D;
-        transform-origin: center center;
-        position: absolute;
-        height: 80%;
-        width: 100%;
-        top: 50%;
-        transform: translateY(-50%) translateX(-102%);
-        transition: 1s ease-in-out all;
-        z-index: -1; }
-      .topbody p a:hover {
-        color: #0B4D58; }
-        .topbody p a:hover:before {
-          transform: translateY(-50%) translateX(0%);
-          transition: 0.3s ease-in-out all; }
-  @media screen and (min-width: 769px) and (max-width: 1087px) {
-    .topbody .topdetail {
-      padding: 2rem; } }
-  @media screen and (max-width: 768px) {
-    .topbody {
-      align-items: flex-end; }
-      .topbody h2 {
-        font-size: 1.8em;
-        margin-bottom: -0.5rem; }
-      .topbody .topdetail {
-        padding: 0 1rem 3rem; } }
-  @media screen and (min-width: 2000px) {
-    .topbody h2 {
-      font-size: 6em; }
-    .topbody h3 {
-      font-size: 2.5em; }
-    .topbody p {
-      font-size: 1.2em; } }
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    padding: 0.5rem 0;
+    font-family: "MetroNovaPro-Bold", "Metro Nova Bold", sans-serif;
+    font-size: 1.2em;
+    border: 2px solid #0B4D58;
+    width: 250px; }
+    .topbody p:before {
+      content: '';
+      height: 80%;
+      top: 50%;
+      transform-origin: center center;
+      transform: translateY(-50%) skewY(-10deg) translateX(-101%); }
+    .topbody p:hover:before {
+      transform-origin: center center;
+      transform: translateY(-50%) skewY(-10deg) translateX(0%); }
 
 h1 {
   position: absolute;
@@ -7498,7 +7464,7 @@ h1 {
 
 h3 {
   font-size: 2em;
-  font-family: "Metro Nova Bold", sans-serif;
+  font-family: "MetroNovaPro-Bold", "Metro Nova Bold", sans-serif;
   text-align: center;
   display: inline-block;
   margin-bottom: 6rem; }
@@ -7515,7 +7481,7 @@ h3 {
     animation-delay: 0.5s;
     animation-fill-mode: backwards; }
   .about h4 {
-    font-family: "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
+    font-family: "MetroNovaPro-Bold", "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
     font-size: 1.2em; }
     @media screen and (min-width: 1024px) and (max-width: 1280px) {
       .about h4 {
@@ -7535,7 +7501,7 @@ h3 {
   .about .icon {
     transform: translate(-2px, 4px); }
   .about a {
-    font-family: "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
+    font-family: "MetroNovaPro-Bold", "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
     position: relative;
     display: inline-block;
     overflow: hidden;
@@ -7736,7 +7702,7 @@ footer {
   margin-bottom: 5rem; }
   .article h4 {
     margin-top: 0.5rem;
-    font-family: "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
+    font-family: "MetroNovaPro-Bold", "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
     font-size: 1em; }
     @media screen and (min-width: 1024px) and (max-width: 1280px) {
       .article h4 {
@@ -7753,7 +7719,7 @@ footer {
     margin-left: 2px;
     margin-top: 6px;
     font-size: 0.6em;
-    font-family: "Metro Nova Black";
+    font-family: "MetroNovaPro-Black", "Metro Nova Black", sans-serif;
     color: #F0E5D1; }
     .article .area span {
       margin-right: 10px;
@@ -7774,7 +7740,7 @@ footer {
   margin-bottom: 4rem; }
   .allworks .article h4 {
     margin-top: 0.5rem;
-    font-family: "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
+    font-family: "MetroNovaPro-Bold", "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
     font-size: 1em; }
     @media screen and (min-width: 1024px) and (max-width: 1280px) {
       .allworks .article h4 {
@@ -7811,61 +7777,121 @@ footer {
 .lum-open {
   z-index: 100; }
 
+.worktop {
+  position: absolute;
+  height: 100vh;
+  width: 100vw; }
+
+.worktop_image {
+  position: absolute;
+  top: 6.5rem;
+  left: 3rem;
+  right: 3rem;
+  height: calc(100% - 9.5rem);
+  width: calc(100% - 6rem);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; }
+  @media screen and (max-width: 768px) {
+    .worktop_image {
+      background-size: contain;
+      top: 0;
+      height: 75%;
+      width: 100%;
+      left: 0;
+      right: 0;
+      top: 0; } }
+
+.workinfo {
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  background-color: #F0E5D1;
+  display: inline-block;
+  padding: 0.5rem 2rem 1.5rem; }
+  .workinfo h4 {
+    font-size: 1.8em;
+    font-family: "MetroNovaPro-Bold", "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
+    margin-top: 0.4rem;
+    line-height: 1.3; }
+  .workinfo h5 {
+    font-family: "MetroNovaPro-Regular", "Metro Nova Regular", "TazuganeGothicStdN-Book", "KoburinaGoStdN-W3", sans-serif;
+    font-size: 0.8em;
+    line-height: 1.5;
+    font-variant-numeric: oldstyle-nums;
+    -moz-font-feature-settings: "onum";
+    -webkit-font-feature-settings: "onum";
+    font-feature-settings: "onum"; }
+  .workinfo .area {
+    margin-top: 0.5rem;
+    font-size: 0.8em;
+    font-family: "Metro Nova Black";
+    color: #F0E5D1; }
+    .workinfo .area span {
+      margin-right: 13px;
+      background-color: #0B4D58;
+      padding: 2px 5px; }
+      .workinfo .area span:last-child {
+        margin-right: 0; }
+  .workinfo h6 {
+    margin-top: 0.7em;
+    text-align: center;
+    padding: 0.5rem 0;
+    font-family: "MetroNovaPro-Bold", "Metro Nova Bold", sans-serif;
+    font-size: 1.2em;
+    border: 2px solid #0B4D58;
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+    .workinfo h6:before {
+      height: 80%;
+      top: 50%;
+      transform-origin: center center;
+      transform: translateY(-50%) skewY(-10deg) translateX(-101%); }
+    .workinfo h6:hover:before {
+      transform-origin: center center;
+      transform: translateY(-50%) skewY(-10deg) translateX(0%); }
+  @media screen and (min-width: 769px) and (max-width: 1087px) {
+    .workinfo h4 {
+      font-size: 1.5em; } }
+  @media screen and (max-width: 768px) {
+    .workinfo {
+      width: 100%;
+      bottom: calc(env(safe-area-inset-bottom) + 44px + 5rem); }
+      .workinfo h4 {
+        font-size: 1.1rem; }
+      .workinfo h5 {
+        font-size: 0.7em;
+        margin-top: 0.1rem; }
+      .workinfo .area span {
+        margin-right: 7px; } }
+
+.toplogo {
+  height: 100vh;
+  margin-bottom: 6rem; }
+  @media screen and (max-width: 768px) {
+    .toplogo {
+      height: 90vh;
+      margin-bottom: 2rem; } }
+
 .contents {
   padding-top: 0;
   margin-top: -1rem; }
   .contents .slideani:after {
     animation-delay: 0.5s;
     animation-fill-mode: backwards; }
-  .contents .workinfo {
-    margin-bottom: 2rem; }
-    .contents .workinfo h4 {
-      font-size: 1.2em;
-      font-family: "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
-      margin-top: 0.4rem;
-      line-height: 1.3; }
-    .contents .workinfo h5 {
-      margin-top: 0.3rem;
-      font-family: "Metro Nova Regular", "TazuganeGothicStdN-Book", "KoburinaGoStdN-W3", sans-serif;
-      font-size: 0.8em;
-      line-height: 1.5;
-      font-variant-numeric: oldstyle-nums;
-      -moz-font-feature-settings: "onum";
-      -webkit-font-feature-settings: "onum";
-      font-feature-settings: "onum"; }
-    .contents .workinfo .area {
-      margin-top: 0.5rem;
-      font-size: 0.8em;
-      font-family: "Metro Nova Black";
-      color: #F0E5D1; }
-      .contents .workinfo .area span {
-        margin-right: 13px;
-        background-color: #0B4D58;
-        padding: 2px 5px; }
-    .contents .workinfo h6 {
-      margin-top: 0.7em;
-      text-align: center;
-      padding: 0.5rem 0;
-      font-family: "Metro Nova Bold", sans-serif;
-      font-size: 1.2em;
-      border: 2px solid #0B4D58; }
-      .contents .workinfo h6:before {
-        height: 80%;
-        top: 50%;
-        transform-origin: center center;
-        transform: translateY(-50%) skewY(-10deg) translateX(-101%); }
-      .contents .workinfo h6:hover:before {
-        transform-origin: center center;
-        transform: translateY(-50%) skewY(-10deg) translateX(0%); }
   .contents .workinfo-mini {
     margin-bottom: 1rem; }
     .contents .workinfo-mini h4 {
       font-size: 1.3em;
-      font-family: "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
+      font-family: "MetroNovaPro-Bold", "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
       margin-top: 0.5rem;
       line-height: 1.3; }
     .contents .workinfo-mini h5 {
-      font-family: "Metro Nova Regular", "TazuganeGothicStdN-Book", "KoburinaGoStdN-W3", sans-serif;
+      font-family: "MetroNovaPro-Regular", "Metro Nova Regular", "TazuganeGothicStdN-Book", "KoburinaGoStdN-W3", sans-serif;
       font-size: 0.8em;
       line-height: 1.5;
       font-variant-numeric: oldstyle-nums;
@@ -7890,7 +7916,7 @@ footer {
     line-height: 1.8;
     text-align: justify; }
     .contents p a {
-      font-family: "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
+      font-family: "MetroNovaPro-Bold", "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif;
       position: relative;
       display: inline-block;
       overflow: hidden;
@@ -7914,7 +7940,7 @@ footer {
           transform: translateY(-50%) translateX(0%);
           transition: 0.3s ease-in-out all; }
     .contents p strong {
-      font-family: "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif; }
+      font-family: "MetroNovaPro-Bold", "Metro Nova Bold", "TazuganeGothicStdN-Bold", "KoburinaGoStdN-W6", sans-serif; }
   .contents .other {
     margin-top: 3rem; }
     .contents .other h4 {
@@ -7922,13 +7948,21 @@ footer {
       font-size: 1em; }
 
 .blog {
-  padding-bottom: 4rem;
+  padding-bottom: 8rem;
   border-bottom: 1px solid #0B4D58;
-  margin-bottom: 5rem; }
+  padding-top: 7rem; }
+  .blog h4 {
+    transition: 0.3s ease-in-out all; }
+    .blog h4:hover {
+      color: #0B4D58; }
+  .blog .workinfo-mini + p {
+    margin-bottom: 1rem; }
   @media screen and (max-width: 768px) {
     .blog {
-      padding-bottom: 2rem;
-      margin-bottom: 3.5rem; } }
+      padding-bottom: 4rem;
+      padding-top: 4rem; } }
+  .blog:first-child {
+    padding-top: 3rem; }
 
 .gray {
   opacity: 0.3; }
@@ -7941,8 +7975,6 @@ footer {
   left: 1.3rem;
   font-size: 2.5em;
   z-index: 10; }
-  #topnav #backtop {
-    margin-left: 0.8rem; }
 
 .level #logo {
   font-size: 2.8em;
@@ -7954,7 +7986,7 @@ footer {
 
 .level p {
   font-size: 1.5em;
-  font-family: "Metro Nova Bold", sans-serif; }
+  font-family: "MetroNovaPro-Bold", "Metro Nova Bold", sans-serif; }
 
 .flexright {
   -webkit-justify-content: flex-end;
@@ -7982,11 +8014,13 @@ footer {
   .level #logo {
     font-size: 2.2em; }
   #topnav {
-    top: 0.3rem;
-    left: 0.8rem;
-    font-size: 2.3em; }
-    #topnav #backtop {
-      margin-left: 0.5rem; }
+    top: auto;
+    left: 0;
+    font-size: 2.3em;
+    padding-left: 0.8rem;
+    padding-right: 0.8rem;
+    bottom: 44px;
+    bottom: calc(env(safe-area-inset-bottom) + 44px); }
   #mobile-menu {
     display: block;
     text-align: center;
@@ -7996,7 +8030,7 @@ footer {
       margin: 0 1rem;
       display: inline-block;
       font-size: 1.2em;
-      font-family: "Metro Nova Bold", sans-serif; }
+      font-family: "MetroNovaPro-Bold", "Metro Nova Bold", sans-serif; }
   .article {
     margin-bottom: 3rem; }
   .works {
@@ -8012,7 +8046,4 @@ footer {
     width: 100vw;
     max-width: 100vw;
     margin-left: calc(((100vw - 100%) / 2) * -1);
-    margin-right: calc(((100vw - 100%) / 2) * -1); }
-  .top {
-    background: #f0f0f0 url("/img/top2.jpg") no-repeat 15% center;
-    background-size: cover; } }
+    margin-right: calc(((100vw - 100%) / 2) * -1); } }

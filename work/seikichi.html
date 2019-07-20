@@ -13,7 +13,7 @@
 	<meta name="twitter:site" content="＠wolphtype" />
 	<meta name="twitter:player" content="＠wolphtype" />
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<title>長谷川清吉展 / Wolph</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" href="/css/style.css">
@@ -38,9 +38,23 @@
 
 <body>
 	<div id="topnav">
-		<p class="icofont"><a id="totop" class="hoverico" href="#"><span class="typeani">s</span></a><a id="backtop" class="hoverico" href="/index.html"><span class="typeani">h</span></a></p>
+		<p class="icofont"><a id="backtop" class="hoverico" href="/index.html"><span class="typeani">h</span></a></p>
 	</div>
-	<section class="section">
+<div class="worktop">
+		<div class="fadeIn animated worktop_image" style='background-image:  url("/img/works/seikichi/top.jpg") ;'></div>
+		<div class="workinfo">
+					<h4><span class="slideani wow">
+							長谷川清吉展
+					</span></h4>
+								<h5><span class="slideani wow">
+						November, 2018 / Galerie Momogusa
+					</span></h5>
+								<p class="area slideani wow"><span>Work</span><span>Website</span><span>Graphic</span></p>
+							
+					<a href="http://www.momogusa.jp/temp/temp2018/seikichi/"><h6 class="animated fadeIn hoverline">Go Site</h6></a>
+		</div>
+	</div>
+	<section class="section toplogo">
 		<h1 class="fadeOutUp animated">Wolph: Masaki Ando Portfolio Site</h1>
 		<nav class="level">
 			<div class="level-item"></div>
@@ -56,32 +70,14 @@
 		<div class="container">
 			<div class="columns is-centered">
 				<div class="column is-9">
-					<img class="fadeIn animated" src="/img/works/seikichi/top.jpg">
-					<div class="workinfo">
-						<div class="columns is-variable is-1">
-							<div class="column is-10">
-								<h4><span class="slideani wow">
-						長谷川清吉展
-					</span></h4>
-								<h5><span class="slideani wow">
-						November, 2018<br>
-						Galerie Momogusa
-					</span></h5>
-								<p class="area slideani wow"><span>Work</span><span>Website</span><span>Graphic</span></p>
-							</div>
-							<div class="column">
-								<a href="http://www.momogusa.jp/temp/temp2018/seikichi/"><h6 class="animated fadeIn hoverline">Go Site</h6></a>
-							</div>
-						</div>
-					</div>
-					<p class="wow fadeInUp">
+					<p class="wow fadeIn">
 						ギャルリももぐさで12月8日から24日まで行われた、「長谷川清吉展」のDMおよびWebサイトを制作しました。<br><br>
 						今回は、いつも展示を行う中では若い世代の作家さんだったため、工芸の界隈に流れこむ新しい風と、長谷川家の一族の歴史を意識したモダンとトラディショナルの組み合わせを意識してデザインを行いました。
 					</p>
 					<img alt="" class="wow fadeIn" data-normal="../img/works/seikichi/naka.jpg">
 					<img alt="" class="wow fadeIn" data-normal="../img/works/seikichi/ura.jpg">
 					<p class="credit wow fadeIn">Design: Masaki Ando
-						<br> Photo: Galerie Staff</p>
+						<br> Photo; Galerie Staff</p>
 					<div class="columns other">
 						<div class="column">
 							<a href="/work/sanimuho.html">
@@ -121,9 +117,9 @@ var scroll = new SmoothScroll('a[href*="#"]');
 new WOW().init();
 </script>
 <script>
-	window.addEventListener("load", () => {
-  const instance = Layzr({threshold: 2}); //thresholdを追加
-  instance.update().handlers(true);
+window.addEventListener("load", () => {
+	const instance = Layzr({ threshold: 2 }); //thresholdを追加
+	instance.update().handlers(true);
 });
 </script>
 

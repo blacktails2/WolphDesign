@@ -13,7 +13,7 @@
 	<meta name="twitter:site" content="＠wolphtype" />
 	<meta name="twitter:player" content="＠wolphtype" />
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 	<title>The Specimens Of Walbaum in Today / Wolph</title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
 	<link rel="stylesheet" href="/css/style.css">
@@ -37,10 +37,23 @@
 
 <body>
 	<div id="topnav">
-		<p class="icofont"><a id="totop" class="hoverico" href="#"><span class="typeani">s</span></a><a id="backtop" class="hoverico" href="/index.html"><span class="typeani">h</span></a></p>
+		<p class="icofont"><a id="backtop" class="hoverico" href="/index.html"><span class="typeani">h</span></a></p>
 	</div>
-	<section class="section">
-		<h1 class="fadeOutUp animated">Wolph: Masaki Ando Portfolio Site</h1>
+<div class="worktop">
+		<div class="fadeIn animated worktop_image" style='background-image:  url("../img/works/walbaum/top.jpg") ;'></div>
+		<div class="workinfo">
+					<h4><span class="slideani wow">
+							The Specimens Of Walbaum in Today
+					</span></h4>
+								<h5><span class="slideani wow">
+						December, 2018 / MAU VCD / Typographic Composition Class
+					</span></h5>
+								<p class="area slideani wow"><span>School</span><span>Editrial</span></p>
+					<a href="https://indd.adobe.com/view/09292012-378d-4066-aeac-adce469b3ec8"><h6 class="animated fadeIn hoverline">View Book</h6></a>
+		</div>
+	</div>
+	<section class="section toplogo">
+		<h1 class="fadeOutUp animated">Wolph; Masaki Ando Portfolio Site</h1>
 		<nav class="level">
 			<div class="level-item"></div>
 			<div class="level-item"></div>
@@ -55,25 +68,7 @@
 		<div class="container">
 			<div class="columns is-centered">
 				<div class="column is-9">
-					<img class="fadeIn animated" src="../img/works/walbaum/top.jpg">
-					<div class="workinfo">
-						<div class="columns is-variable is-1">
-							<div class="column is-10">
-								<h4><span class="slideani wow">
-						The Specimens Of Walbaum in Today
-					</span></h4>
-								<h5><span class="slideani wow">
-						December, 2018<br>
-						MAU VCD<br>Typographic Composition Class
-					</span></h5>
-								<p class="area slideani wow"><span>School</span><span>Editrial</span></p>
-							</div>
-							<div class="column">
-								<a href="https://indd.adobe.com/view/09292012-378d-4066-aeac-adce469b3ec8"><h6 class="animated fadeIn hoverline">View Book</h6></a>
-							</div>
-						</div>
-					</div>
-					<p class="wow fadeInUp">
+					<p class="wow fadeIn">
 						武蔵野美術大学 視覚伝達デザイン学科 2群の選択授業、「タイポグラフィック・コンポジション」の作品です。19世紀初頭に作られたWalbaumを大幅に拡張した新しいMonotypeのWalbaumの見本帳を制作しました。Walbaumの特徴をまとめ、ITC Bodoniと比較しながら日本語と英語の2ヶ国語で組版を行いました。<br><br>
 						本講義では、学生が各々欧文・和文どちらかの書体を一つ選び、その書体についての見本帳を制作します。見本帳のスタイルは自由で、私のように特徴をまとめたものやアウトラインのみに着目したもの、物語を組んだものなど様々です。課題は第一課題、第二課題、第三課題、最終課題と用意されており、本見本帳は最終課題です。最初はドットスタディという直径5mmのドットを物差しなどを使わず等間隔に並べたり、グラデーションを作り、視感覚を鍛えます。組版の面でも、和文と欧文を組み合わせ同一の濃さで組んだり、16ページの小見本帳を制作するなど、段階を踏んで組版の考え方と感覚を鍛えていきました。
 					</p>
@@ -99,9 +94,9 @@ var scroll = new SmoothScroll('a[href*="#"]');
 new WOW().init();
 </script>
 <script>
-	window.addEventListener("load", () => {
-  const instance = Layzr({threshold: 2}); //thresholdを追加
-  instance.update().handlers(true);
+window.addEventListener("load", () => {
+	const instance = Layzr({ threshold: 2 }); //thresholdを追加
+	instance.update().handlers(true);
 });
 </script>
 

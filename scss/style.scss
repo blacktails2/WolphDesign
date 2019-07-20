@@ -76,21 +76,28 @@
 	src: url("../fonts/627c4008-6853-4212-bc49-2cfb434eebe1.eot?#iefix") format("eot"), url("../fonts/8afa9455-e31b-4079-89b1-9e307897fa06.woff2") format("woff2"), url("../fonts/29c5a64b-e311-466c-8c88-e246386ed241.woff") format("woff"), url("../fonts/810c543d-41fa-4f96-85f1-06ee13363251.ttf") format("truetype");
 }
 
-$body: "Metro Nova Regular",
+$body: "MetroNovaPro-Regular",
+"Metro Nova Regular",
 "TazuganeGothicStdN-Book",
 "KoburinaGoStdN-W3",
 sans-serif;
-$bold: "Metro Nova Bold",
+$bold: "MetroNovaPro-Bold",
+"Metro Nova Bold",
 "TazuganeGothicStdN-Bold",
 "KoburinaGoStdN-W6",
 sans-serif;
-$boldeg: "Metro Nova Bold",
+$boldeg: "MetroNovaPro-Bold",
+"Metro Nova Bold",
 sans-serif;
 $text: #333;
 $primary: #0B4D58;
 $back: #F0E5D1;
 $sub: #F5C51D;
-$topcolor: #FFF;
+$topcolor: #333;
+
+html {
+	background-color: $back;
+}
 
 body {
 	font-family: $body;
@@ -113,48 +120,70 @@ body {
 .icofont {
 	font-family: forwolph !important;
 }
-#scene{
+
+#scene {
 	position: absolute;
-	width: 150vw;
+	width: 100vw;
 	height: 100vh;
-	left: -50%;
+	overflow: hidden;
 }
+
 .top {
-	position: absolute;
-	width: 150vw;
-	height: 100vh;
-	background: url("/img/top2.jpg") no-repeat center center;
-	background-size: cover;
+	position: relative;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+	mix-blend-mode: multiply;
 
-	@include desktop {
-		background-attachment: fixed;
-	}
-
-	@include tablet-only {
-		background-position: 30% center;
-	}
-
-	@include mobile {
-		background-position: 10% center;
-	}
-}
-.top2{
+	#top-img1 {
 		position: absolute;
-	width: 150vw;
-	height: 100vh;
-	background: url("/img/top2-1.png") no-repeat center center;
-	background-size: cover;
-
-	@include desktop {
+		width: 120%;
+		height: 120%;
+		left: -10%;
+		top: -10%;
+		background: url("/img/top4.jpg") no-repeat center center;
+		background-size: cover;
 		background-attachment: fixed;
+		@include tablet-only{
+			background-attachment: scroll;
+		}
+		@include mobile{
+			background-attachment: scroll;
+		}
 	}
 
-	@include tablet-only {
-		background-position: 30% center;
+	#top-img2 {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		left: 0;
+		top: 0;
+		background: url("/img/top4-1.svgz") no-repeat center center;
+		background-size: cover;
 	}
 
-	@include mobile {
-		background-position: 10% center;
+	#top-img3 {
+		position: absolute;
+		width: 120%;
+		height: 120%;
+		left: -10%;
+		top: -10%;
+		background: url("/img/top4-2.svgz") no-repeat center center;
+		background-size: cover;
+		filter: drop-shadow(7px 13px 8px rgba(0, 0, 0, 0.2));
+	}
+
+	#top-img4 {
+		position: absolute;
+		width: 120%;
+		height: 120%;
+		left: -10%;
+		top: -10%;
+		background: url("/img/top4-3.svgz") no-repeat center center;
+		background-size: cover;
+		filter: drop-shadow(7px 13px 8px rgba(0, 0, 0, 0.2));
 	}
 }
 
@@ -189,110 +218,29 @@ body {
 	height: 100vh;
 	top: 0;
 	left: 0;
-	display: flex;
-	-webkit-align-items: center;
-	align-items: center;
-
-	.container {
-		-webkit-flex-basis: 100%;
-		flex-basis: 100%;
-	}
-
-	h2,
-	h3,
-	p,
-	a {
-		color: $topcolor;
-	}
-
-	h2 {
-		font-family: ElectraLTStd-BoldCursiveDis, 'Electra Bold Cursive Display', serif;
-		font-size: 4em;
-		animation-delay: 0.2s;
-	}
-
-	h3 {
-		font-family: 'Electra LT Std Bold Display', 'Electra Bold Display', serif;
-		font-size: 1.5em;
-		margin-top: -10px;
-		border-bottom: 1px solid;
-		text-align: left;
-		display: block;
-		padding-bottom: 0.2em;
-		margin-bottom: 0.3em;
-		animation-delay: 0.4s;
-	}
-
 	p {
-		font-family: 'ElectraLTStd-Bold', 'Electra Bold', serif;
-		font-size: 0.9em;
-		line-height: 1.4;
-		animation-delay: 0.6s;
+		position: absolute;
+		bottom: 5rem;
+		left: 50%;
+		transform: translateX(-50%);
+		text-align: center;
+		padding: 0.5rem 0;
+		font-family: $boldeg;
+		font-size: 1.2em;
+		border: 2px solid $primary;
+		width: 250px;
 
-		a {
-			margin-top: 5px;
-			margin-left: -8px;
-			font-size: 1.2em;
-			font-family: 'ElectraLTStd-BoldCursive', 'Electra Bold Cursive', serif;
-			position: relative;
-			display: inline-block;
-			overflow: hidden;
-			transition: 0.3s ease-in-out all;
-			vertical-align: top;
-			z-index: 2;
-
-			&:before {
-				content: "";
-				background-color: $sub;
-				transform-origin: center center;
-				position: absolute;
-				height: 80%;
-				width: 100%;
-				top: 50%;
-				transform: translateY(-50%) translateX(-102%);
-				transition: 1s ease-in-out all;
-				z-index: -1;
-			}
-
-			&:hover {
-				color: $primary;
-
-				&:before {
-					transform: translateY(-50%) translateX(0%);
-					transition: 0.3s ease-in-out all;
-				}
-			}
-		}
-	}
-
-	@include tablet-only {
-		.topdetail {
-			padding: 2rem;
-		}
-	}
-
-	@include mobile {
-		align-items: flex-end;
-		h2{
-			font-size: 1.8em;
-			margin-bottom: -0.5rem;
-		}
-		.topdetail {
-			padding: 0 1rem 3rem;
-		}
-	}
-
-	@media screen and (min-width: 2000px) {
-		h2 {
-			font-size: 6em;
+		&:before {
+			content: '';
+			height: 80%;
+			top: 50%;
+			transform-origin: center center;
+			transform: translateY(-50%) skewY(-10deg) translateX(-101%);
 		}
 
-		h3 {
-			font-size: 2.5em;
-		}
-
-		p {
-			font-size: 1.2em;
+		&:hover:before {
+			transform-origin: center center;
+			transform: translateY(-50%) skewY(-10deg) translateX(0%);
 		}
 	}
 }
@@ -643,7 +591,7 @@ footer {
 		margin-left: 2px;
 		margin-top: 6px;
 		font-size: 0.6em;
-		font-family: "Metro Nova Black";
+		font-family: "MetroNovaPro-Black", "Metro Nova Black", sans-serif;
 		color: $back;
 
 		span {
@@ -736,6 +684,138 @@ footer {
 	z-index: 100;
 }
 
+.worktop {
+	position: absolute;
+	height: 100vh;
+	width: 100vw;
+}
+
+.worktop_image {
+	position: absolute;
+	top: 6.5rem;
+	left: 3rem;
+	right: 3rem;
+	height: calc(100% - 9.5rem);
+	width: calc(100% - 6rem);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@include mobile {
+		background-size: contain;
+		top: 0;
+		height: 75%;
+		width: 100%;
+		left: 0;
+		right: 0;
+		top: 0;
+	}
+}
+
+.workinfo {
+	position: absolute;
+	bottom: 5rem;
+	left: 50%;
+	transform: translateX(-50%);
+	text-align: center;
+	background-color: $back;
+	display: inline-block;
+	padding: 0.5rem 2rem 1.5rem;
+
+	h4 {
+		font-size: 1.8em;
+		font-family: $bold;
+		margin-top: 0.4rem;
+		line-height: 1.3;
+	}
+
+	h5 {
+		font-family: $body;
+		font-size: 0.8em;
+		line-height: 1.5;
+		font-variant-numeric: oldstyle-nums;
+		-moz-font-feature-settings: "onum";
+		-webkit-font-feature-settings: "onum";
+		font-feature-settings: "onum";
+	}
+
+	.area {
+		margin-top: 0.5rem;
+		font-size: 0.8em;
+		font-family: "Metro Nova Black";
+		color: $back;
+
+		span {
+			margin-right: 13px;
+			background-color: $primary;
+			padding: 2px 5px;
+
+			&:last-child {
+				margin-right: 0;
+			}
+		}
+	}
+
+	h6 {
+		margin-top: 0.7em;
+		text-align: center;
+		padding: 0.5rem 0;
+		font-family: $boldeg;
+		font-size: 1.2em;
+		border: 2px solid $primary;
+		width: 250px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+
+		&:before {
+			height: 80%;
+			top: 50%;
+			transform-origin: center center;
+			transform: translateY(-50%) skewY(-10deg) translateX(-101%);
+		}
+
+		&:hover:before {
+			transform-origin: center center;
+			transform: translateY(-50%) skewY(-10deg) translateX(0%);
+		}
+	}
+
+	@include tablet-only {
+		h4 {
+			font-size: 1.5em;
+		}
+	}
+
+	@include mobile {
+		width: 100%;
+		bottom: calc(env(safe-area-inset-bottom) + 44px + 5rem);
+
+		h4 {
+			font-size: 1.1rem;
+		}
+
+		h5 {
+			font-size: 0.7em;
+			margin-top: 0.1rem;
+		}
+
+		.area span {
+			margin-right: 7px;
+		}
+	}
+}
+
+.toplogo {
+	height: 100vh;
+	margin-bottom: 6rem;
+
+	@include mobile {
+		height: 90vh;
+		margin-bottom: 2rem;
+	}
+}
+
 .contents {
 	padding-top: 0;
 	margin-top: -1rem;
@@ -743,62 +823,6 @@ footer {
 	.slideani:after {
 		animation-delay: 0.5s;
 		animation-fill-mode: backwards;
-	}
-
-	.workinfo {
-		margin-bottom: 2rem;
-
-		h4 {
-			font-size: 1.2em;
-			font-family: $bold;
-			margin-top: 0.4rem;
-			line-height: 1.3;
-		}
-
-		h5 {
-			margin-top: 0.3rem;
-			font-family: $body;
-			font-size: 0.8em;
-			line-height: 1.5;
-			font-variant-numeric: oldstyle-nums;
-			-moz-font-feature-settings: "onum";
-			-webkit-font-feature-settings: "onum";
-			font-feature-settings: "onum";
-		}
-
-		.area {
-			margin-top: 0.5rem;
-			font-size: 0.8em;
-			font-family: "Metro Nova Black";
-			color: $back;
-
-			span {
-				margin-right: 13px;
-				background-color: $primary;
-				padding: 2px 5px;
-			}
-		}
-
-		h6 {
-			margin-top: 0.7em;
-			text-align: center;
-			padding: 0.5rem 0;
-			font-family: $boldeg;
-			font-size: 1.2em;
-			border: 2px solid $primary;
-
-			&:before {
-				height: 80%;
-				top: 50%;
-				transform-origin: center center;
-				transform: translateY(-50%) skewY(-10deg) translateX(-101%);
-			}
-
-			&:hover:before {
-				transform-origin: center center;
-				transform: translateY(-50%) skewY(-10deg) translateX(0%);
-			}
-		}
 	}
 
 	.workinfo-mini {
@@ -881,7 +905,8 @@ footer {
 				}
 			}
 		}
-		strong{
+
+		strong {
 			font-family: $bold;
 		}
 	}
@@ -897,13 +922,29 @@ footer {
 }
 
 .blog {
-	padding-bottom: 4rem;
+	padding-bottom: 8rem;
 	border-bottom: 1px solid $primary;
-	margin-bottom: 5rem;
+	padding-top: 7rem;
+
+	h4 {
+		transition: 0.3s ease-in-out all;
+
+		&:hover {
+			color: $primary;
+		}
+	}
+
+	.workinfo-mini+p {
+		margin-bottom: 1rem;
+	}
 
 	@include mobile {
-		padding-bottom: 2rem;
-		margin-bottom: 3.5rem;
+		padding-bottom: 4rem;
+		padding-top: 4rem;
+	}
+
+	&:first-child {
+		padding-top: 3rem;
 	}
 }
 
@@ -923,10 +964,6 @@ footer {
 	left: 1.3rem;
 	font-size: 2.5em;
 	z-index: 10;
-
-	#backtop {
-		margin-left: 0.8rem;
-	}
 }
 
 .level {
@@ -982,13 +1019,13 @@ footer {
 	}
 
 	#topnav {
-		top: 0.3rem;
-		left: 0.8rem;
+		top: auto;
+		left: 0;
 		font-size: 2.3em;
-
-		#backtop {
-			margin-left: 0.5rem;
-		}
+		padding-left: 0.8rem;
+		padding-right: 0.8rem;
+		bottom: 44px;
+		bottom: calc(env(safe-area-inset-bottom) + 44px);
 	}
 
 	#mobile-menu {
@@ -1035,8 +1072,4 @@ footer {
 		}
 	}
 
-	.top {
-		background: #f0f0f0 url("/img/top2.jpg") no-repeat 15% center;
-		background-size: cover;
-	}
 }
